@@ -253,3 +253,23 @@ body{
     color:#0b2d73;
     text-decoration:underline;
 }
+.bookmark-icon{
+    width:40px;
+    height:40px;
+    border:none;
+    background:transparent;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.2s;
+    margin-left:5px;
+}
+
+.bookmark-icon:hover{
+    background:rgba(0,0,0,0.08);
+    transform:scale(1.1);
+}
+
+.bookmark-icon.saved{
+    background:rgba(30,58,95,0.1);
+}

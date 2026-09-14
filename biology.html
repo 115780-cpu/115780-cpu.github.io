@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biology | Study Help Hub</title>
 <link rel="stylesheet" href="style.css">
+
+<style>
+.bookmark-icon{
+    width:40px;
+    height:40px;
+    border:none;
+    background:transparent;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.2s;
+    margin-left:5px;
+}
+
+.bookmark-icon:hover{
+    background:rgba(0,0,0,0.08);
+    transform:scale(1.1);
+}
+
+.bookmark-icon.saved{
+    background:rgba(30,58,95,0.1);
+}
+</style>
+
 </head>
+
 <body>
 
 <div class="sidebar">
+
 <div class="logo-section">
 <img src="Logo.png" class="logo" alt="Logo">
 <h2>Study Help Hub</h2>
 </div>
+
 <ul>
+
 <li><a href="index.html"><img src="home.png"><span>Home</span></a></li>
 <li><a href="math.html"><img src="Math icon.png"><span>Mathematics</span></a></li>
 <li><a href="science.html"><img src="Science icon.png"><span>Science</span></a></li>
@@ -24,22 +53,41 @@
 <li><a href="bookmarks.html"><img src="bookmark.png"><span>Bookmarks</span></a></li>
 <li><a href="settings.html"><img src="settings.png"><span>Settings</span></a></li>
 <li><a href="help.html"><img src="help-desk.png"><span>Help & Support</span></a></li>
+
 </ul>
+
 </div>
+
 
 <div class="main-content">
+
 <div class="topbar">
 <input type="text" placeholder="Search Biology...">
-<img src="Profile icon.png" class="profile">
+
+<a href="profile.html">
+<img src="Profile icon.png" class="profile" alt="Profile">
+</a>
+
 </div>
+
 
 <div class="welcome-text">
+
 <h1>🧬 Biology</h1>
-<p>Biology is the study of living organisms and life processes. Learn about cells, genetics, ecosystems, plants, animals and the human body.</p>
+
+<p>
+Biology is the study of living organisms and life processes.
+Learn about cells, genetics, ecosystems, plants, animals and
+the human body.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>📚 What You'll Learn</h3>
+
 <ul>
 <li>Cells and Cell Structure</li>
 <li>Human Body Systems</li>
@@ -50,79 +98,313 @@
 <li>Classification of Living Things</li>
 <li>Microorganisms</li>
 </ul>
+
 </div>
 
+
 <div class="card">
+
 <h3>💡 Study Tip</h3>
-<p>Draw labelled diagrams of cells, organs and food chains. Visual learning makes biology much easier to remember.</p>
+
+<p>
+Draw labelled diagrams of cells, organs and food chains.
+Visual learning makes biology much easier to remember.
+</p>
+
 </div>
 
-<div class="card">
+
+<div class="card" id="question1">
+
 <h3>📝 Example Question 1</h3>
+
 <p><strong>Question:</strong></p>
+
 <p>What is the basic unit of life?</p>
-<button class="show-btn" onclick="showAnswer('a1',this)">Show Answer</button>
+
+<button class="show-btn" onclick="showAnswer('a1',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-biology1"
+onclick="toggleBookmark(
+'biology1',
+'What is the basic unit of life?',
+'What is the basic unit of life?',
+'Science - Biology',
+'biology.html#question1',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
 <div id="a1" class="answer">
+
 <p><strong>Answer</strong></p>
+
 <p>The cell is the basic unit of life.</p>
-</div>
+
 </div>
 
-<div class="card">
+</div>
+
+
+<div class="card" id="question2">
+
 <h3>📝 Example Question 2</h3>
+
 <p><strong>Question:</strong></p>
+
 <p>Which organ pumps blood around the body?</p>
-<button class="show-btn" onclick="showAnswer('a2',this)">Show Answer</button>
+
+<button class="show-btn" onclick="showAnswer('a2',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-biology2"
+onclick="toggleBookmark(
+'biology2',
+'Which organ pumps blood around the body?',
+'Which organ pumps blood around the body?',
+'Science - Biology',
+'biology.html#question2',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
 <div id="a2" class="answer">
+
 <p><strong>Answer</strong></p>
+
 <p>The heart pumps blood around the body.</p>
-</div>
+
 </div>
 
-<div class="card">
+</div>
+
+
+<div class="card" id="question3">
+
 <h3>📝 Example Question 3</h3>
+
 <p><strong>Question:</strong></p>
+
 <p>Which process allows plants to make food?</p>
-<button class="show-btn" onclick="showAnswer('a3',this)">Show Answer</button>
+
+<button class="show-btn" onclick="showAnswer('a3',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-biology3"
+onclick="toggleBookmark(
+'biology3',
+'Which process allows plants to make food?',
+'Which process allows plants to make food?',
+'Science - Biology',
+'biology.html#question3',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
 <div id="a3" class="answer">
+
 <p><strong>Answer</strong></p>
-<p>Photosynthesis allows plants to make food using sunlight, water and carbon dioxide.</p>
-</div>
+
+<p>
+Photosynthesis allows plants to make food using sunlight,
+water and carbon dioxide.
+</p>
+
 </div>
 
-<div class="card">
+</div>
+
+
+<div class="card" id="question4">
+
 <h3>📝 Example Question 4</h3>
+
 <p><strong>Question:</strong></p>
+
 <p>What carries genetic information?</p>
-<button class="show-btn" onclick="showAnswer('a4',this)">Show Answer</button>
+
+<button class="show-btn" onclick="showAnswer('a4',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-biology4"
+onclick="toggleBookmark(
+'biology4',
+'What carries genetic information?',
+'What carries genetic information?',
+'Science - Biology',
+'biology.html#question4',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
 <div id="a4" class="answer">
+
 <p><strong>Answer</strong></p>
+
 <p>DNA carries genetic information in living organisms.</p>
-</div>
+
 </div>
 
-<div class="card">
+</div>
+
+
+<div class="card" id="question5">
+
 <h3>📝 Example Question 5</h3>
+
 <p><strong>Question:</strong></p>
+
 <p>Name one producer in a food chain.</p>
-<button class="show-btn" onclick="showAnswer('a5',this)">Show Answer</button>
+
+<button class="show-btn" onclick="showAnswer('a5',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-biology5"
+onclick="toggleBookmark(
+'biology5',
+'Name one producer in a food chain.',
+'Name one producer in a food chain.',
+'Science - Biology',
+'biology.html#question5',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
 <div id="a5" class="answer">
+
 <p><strong>Answer</strong></p>
+
 <p>Plants are producers because they make their own food.</p>
-</div>
+
 </div>
 
 </div>
+
+</div>
+
+
 <script>
+
 function showAnswer(id,button){
+
 var answer=document.getElementById(id);
+
 if(answer.style.display==="block"){
+
 answer.style.display="none";
 button.innerHTML="Show Answer";
+
 }else{
+
 answer.style.display="block";
 button.innerHTML="Hide Answer";
-}}
+
+}
+
+}
+
+
+function toggleBookmark(id,title,description,subject,link,button){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+var existingIndex =
+bookmarks.findIndex(function(bookmark){
+
+return bookmark.id === id;
+
+});
+
+
+if(existingIndex !== -1){
+
+bookmarks.splice(existingIndex,1);
+
+button.innerHTML="🔖";
+button.classList.remove("saved");
+
+}else{
+
+bookmarks.push({
+
+id:id,
+title:title,
+description:description,
+subject:subject,
+link:link
+
+});
+
+button.innerHTML="🔖";
+button.classList.add("saved");
+
+}
+
+
+localStorage.setItem(
+"studyBookmarks",
+JSON.stringify(bookmarks)
+);
+
+}
+
+
+function updateBookmarkButtons(){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+bookmarks.forEach(function(bookmark){
+
+var button =
+document.getElementById("bookmark-" + bookmark.id);
+
+if(button){
+
+button.classList.add("saved");
+button.innerHTML="🔖";
+
+}
+
+});
+
+}
+
+
+window.addEventListener("load",function(){
+
+updateBookmarkButtons();
+
+});
+
 </script>
+
 </body>
 </html>

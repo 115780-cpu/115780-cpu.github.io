@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,7 +142,7 @@
 
         <br>
 
-        <form>
+        <form id="questionForm" onsubmit="submitQuestion(event)">
 
             <label>
                 <strong>Your Name</strong>
@@ -151,7 +152,9 @@
 
             <input
                 type="text"
+                id="questionName"
                 placeholder="Enter your name"
+                required
                 style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; margin-bottom:20px;"
             >
 
@@ -162,6 +165,8 @@
             <br><br>
 
             <select
+                id="questionSubject"
+                required
                 style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; margin-bottom:20px;"
             >
 
@@ -182,7 +187,9 @@
 
             <input
                 type="text"
+                id="questionTopic"
                 placeholder="e.g. Algebra, Chemistry, Essay Writing..."
+                required
                 style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; margin-bottom:20px;"
             >
 
@@ -194,8 +201,10 @@
             <br><br>
 
             <textarea
+                id="questionText"
                 rows="8"
                 placeholder="Type your question here..."
+                required
                 style="width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; resize:vertical;"
             ></textarea>
 
@@ -208,6 +217,8 @@
             >
                 Submit Question
             </button>
+
+            <p id="questionMessage"></p>
 
         </form>
 
@@ -267,5 +278,74 @@
 
 </div>
 
+
+<!-- QUESTION SUBMISSION SCRIPT -->
+
+<script>
+
+function submitQuestion(event) {
+
+    event.preventDefault();
+
+
+    var name =
+        document.getElementById("questionName").value;
+
+    var subject =
+        document.getElementById("questionSubject").value;
+
+    var topic =
+        document.getElementById("questionTopic").value;
+
+    var questionText =
+        document.getElementById("questionText").value;
+
+
+    var questions =
+        JSON.parse(localStorage.getItem("studyQuestions")) || [];
+
+
+    var newQuestion = {
+
+        name: name,
+
+        subject: subject,
+
+        topic: topic,
+
+        question: questionText,
+
+        date: new Date().toLocaleDateString(),
+
+        status: "Waiting for an answer"
+
+    };
+
+
+    questions.push(newQuestion);
+
+
+    localStorage.setItem(
+        "studyQuestions",
+        JSON.stringify(questions)
+    );
+
+
+    document.getElementById("questionMessage").innerHTML =
+        "✅ Your question has been submitted!";
+
+
+    setTimeout(function() {
+
+        window.location.href = "my-questions.html";
+
+    }, 700);
+
+}
+
+</script>
+
 </body>
 </html>
+
+

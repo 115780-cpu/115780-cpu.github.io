@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History | Study Help Hub</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .bookmark-icon{
+            width:40px;
+            height:40px;
+            border:none;
+            background:transparent;
+            font-size:22px;
+            cursor:pointer;
+            border-radius:50%;
+            transition:0.2s;
+            margin-left:5px;
+        }
+
+        .bookmark-icon:hover{
+            background:rgba(0,0,0,0.08);
+            transform:scale(1.1);
+        }
+
+        .bookmark-icon.saved{
+            background:rgba(30,58,95,0.1);
+        }
+    </style>
 </head>
 
 <body>
@@ -180,7 +203,7 @@
 
     <!-- QUESTION 1 -->
 
-    <div class="card">
+    <div class="card" id="question1">
 
         <h3>📝 Example Question 1</h3>
 
@@ -194,6 +217,21 @@
             class="show-btn"
             onclick="showAnswer('answer1', this)">
             Show Answer
+        </button>
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-history1"
+            onclick="toggleBookmark(
+                'history1',
+                'What is a primary historical source?',
+                'What is a primary historical source?',
+                'History',
+                'history.html#question1',
+                this
+            )"
+            aria-label="Bookmark question">
+            🔖
         </button>
 
         <div id="answer1" class="answer">
@@ -213,7 +251,7 @@
 
     <!-- QUESTION 2 -->
 
-    <div class="card">
+    <div class="card" id="question2">
 
         <h3>📝 Example Question 2</h3>
 
@@ -227,6 +265,21 @@
             class="show-btn"
             onclick="showAnswer('answer2', this)">
             Show Answer
+        </button>
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-history2"
+            onclick="toggleBookmark(
+                'history2',
+                'What is a secondary historical source?',
+                'What is a secondary historical source?',
+                'History',
+                'history.html#question2',
+                this
+            )"
+            aria-label="Bookmark question">
+            🔖
         </button>
 
         <div id="answer2" class="answer">
@@ -246,7 +299,7 @@
 
     <!-- QUESTION 3 -->
 
-    <div class="card">
+    <div class="card" id="question3">
 
         <h3>📝 Example Question 3</h3>
 
@@ -260,6 +313,21 @@
             class="show-btn"
             onclick="showAnswer('answer3', this)">
             Show Answer
+        </button>
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-history3"
+            onclick="toggleBookmark(
+                'history3',
+                'What does chronology mean in history?',
+                'What does chronology mean in history?',
+                'History',
+                'history.html#question3',
+                this
+            )"
+            aria-label="Bookmark question">
+            🔖
         </button>
 
         <div id="answer3" class="answer">
@@ -278,7 +346,7 @@
 
     <!-- QUESTION 4 -->
 
-    <div class="card">
+    <div class="card" id="question4">
 
         <h3>📝 Example Question 4</h3>
 
@@ -293,6 +361,21 @@
             class="show-btn"
             onclick="showAnswer('answer4', this)">
             Show Answer
+        </button>
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-history4"
+            onclick="toggleBookmark(
+                'history4',
+                'Why is it important to consider different perspectives when studying history?',
+                'Why is it important to consider different perspectives when studying history?',
+                'History',
+                'history.html#question4',
+                this
+            )"
+            aria-label="Bookmark question">
+            🔖
         </button>
 
         <div id="answer4" class="answer">
@@ -313,7 +396,7 @@
 
     <!-- QUESTION 5 -->
 
-    <div class="card">
+    <div class="card" id="question5">
 
         <h3>📝 Example Question 5</h3>
 
@@ -327,6 +410,21 @@
             class="show-btn"
             onclick="showAnswer('answer5', this)">
             Show Answer
+        </button>
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-history5"
+            onclick="toggleBookmark(
+                'history5',
+                'What is a historical timeline used for?',
+                'What is a historical timeline used for?',
+                'History',
+                'history.html#question5',
+                this
+            )"
+            aria-label="Bookmark question">
+            🔖
         </button>
 
         <div id="answer5" class="answer">
@@ -386,6 +484,78 @@ function showAnswer(id, button) {
     }
 
 }
+
+
+function toggleBookmark(id, title, description, subject, link, button) {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+    var existingIndex =
+        bookmarks.findIndex(function(bookmark) {
+            return bookmark.id === id;
+        });
+
+    if (existingIndex !== -1) {
+
+        bookmarks.splice(existingIndex, 1);
+
+        button.innerHTML = "🔖";
+
+        button.classList.remove("saved");
+
+    } else {
+
+        bookmarks.push({
+            id: id,
+            title: title,
+            description: description,
+            subject: subject,
+            link: link
+        });
+
+        button.innerHTML = "🔖";
+
+        button.classList.add("saved");
+
+    }
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+}
+
+
+function updateBookmarkButtons() {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+    bookmarks.forEach(function(bookmark) {
+
+        var button =
+            document.getElementById("bookmark-" + bookmark.id);
+
+        if (button) {
+
+            button.classList.add("saved");
+
+            button.innerHTML = "🔖";
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener("load", function() {
+
+    updateBookmarkButtons();
+
+});
 
 </script>
 

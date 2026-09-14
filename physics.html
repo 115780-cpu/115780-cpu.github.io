@@ -3,563 +3,507 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Physics | Study Help Hub</title>
+<title>Physics | Study Help Hub</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.bookmark-icon{
+    width:40px;
+    height:40px;
+    border:none;
+    background:transparent;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.2s;
+    margin-left:5px;
+}
+
+.bookmark-icon:hover{
+    background:rgba(0,0,0,0.08);
+    transform:scale(1.1);
+}
+
+.bookmark-icon.saved{
+    background:rgba(30,58,95,0.1);
+}
+
+</style>
 
 </head>
-
 
 <body>
 
 
-<!-- ================= SIDEBAR ================= -->
-
 <div class="sidebar">
 
+<div class="logo-section">
 
-    <div class="logo-section">
+<img src="Logo.png" alt="Study Help Hub Logo" class="logo">
 
-        <img
-            src="Logo.png"
-            alt="Study Help Hub Logo"
-            class="logo"
-        >
-
-        <h2>Study Help Hub</h2>
-
-    </div>
-
-
-    <ul>
-
-
-        <li>
-            <a href="index.html">
-
-                <img
-                    src="home.png"
-                    alt="Home"
-                >
-
-                <span>Home</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="math.html">
-
-                <img
-                    src="Math icon.png"
-                    alt="Mathematics"
-                >
-
-                <span>Mathematics</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="science.html">
-
-                <img
-                    src="Science icon.png"
-                    alt="Science"
-                >
-
-                <span>Science</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="english.html">
-
-                <img
-                    src="English icon.png"
-                    alt="English"
-                >
-
-                <span>English</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="history.html">
-
-                <img
-                    src="History icon.png"
-                    alt="History"
-                >
-
-                <span>History</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="ask-question.html">
-
-                <img
-                    src="ask-for-help.png"
-                    alt="Ask Question"
-                >
-
-                <span>Ask Question</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="my-questions.html">
-
-                <img
-                    src="My question.png"
-                    alt="My Questions"
-                >
-
-                <span>My Questions</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="bookmarks.html">
-
-                <img
-                    src="bookmark.png"
-                    alt="Bookmarks"
-                >
-
-                <span>Bookmarks</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="settings.html">
-
-                <img
-                    src="settings.png"
-                    alt="Settings"
-                >
-
-                <span>Settings</span>
-
-            </a>
-        </li>
-
-
-        <li>
-            <a href="help.html">
-
-                <img
-                    src="help-desk.png"
-                    alt="Help and Support"
-                >
-
-                <span>Help & Support</span>
-
-            </a>
-        </li>
-
-
-    </ul>
+<h2>Study Help Hub</h2>
 
 </div>
 
 
+<ul>
 
-<!-- ================= MAIN CONTENT ================= -->
+<li><a href="index.html">
+<img src="home.png" alt="Home">
+<span>Home</span>
+</a></li>
+
+<li><a href="math.html">
+<img src="Math icon.png" alt="Mathematics">
+<span>Mathematics</span>
+</a></li>
+
+<li><a href="science.html">
+<img src="Science icon.png" alt="Science">
+<span>Science</span>
+</a></li>
+
+<li><a href="english.html">
+<img src="English icon.png" alt="English">
+<span>English</span>
+</a></li>
+
+<li><a href="history.html">
+<img src="History icon.png" alt="History">
+<span>History</span>
+</a></li>
+
+<li><a href="ask-question.html">
+<img src="ask-for-help.png" alt="Ask Question">
+<span>Ask Question</span>
+</a></li>
+
+<li><a href="my-questions.html">
+<img src="My question.png" alt="My Questions">
+<span>My Questions</span>
+</a></li>
+
+<li><a href="bookmarks.html">
+<img src="bookmark.png" alt="Bookmarks">
+<span>Bookmarks</span>
+</a></li>
+
+<li><a href="settings.html">
+<img src="settings.png" alt="Settings">
+<span>Settings</span>
+</a></li>
+
+<li><a href="help.html">
+<img src="help-desk.png" alt="Help & Support">
+<span>Help & Support</span>
+</a></li>
+
+</ul>
+
+</div>
+
 
 <div class="main-content">
 
+<div class="topbar">
 
-    <!-- TOP BAR -->
+<input type="text" placeholder="Search Physics...">
 
-    <div class="topbar">
+<a href="profile.html">
 
-        <input
-            type="text"
-            placeholder="Search Physics..."
-        >
+<img
+src="Profile icon.png"
+alt="Profile"
+class="profile">
 
-
-        <a
-            href="profile.html"
-            class="profile-link"
-        >
-
-            <img
-                src="Profile icon.png"
-                alt="Profile"
-                class="profile"
-            >
-
-        </a>
-
-    </div>
-
-
-
-    <!-- WELCOME -->
-
-    <div class="welcome-text">
-
-        <h1>⚛️ Physics</h1>
-
-        <p>
-            Physics is the study of matter, energy, motion,
-            forces and how objects interact with each other.
-            Explore important physics concepts through
-            explanations, examples and practice questions.
-        </p>
-
-    </div>
-
-
-
-    <!-- WHAT YOU'LL LEARN -->
-
-    <div class="card">
-
-        <h3>📚 What You'll Learn</h3>
-
-        <ul>
-
-            <li>Motion & Speed</li>
-
-            <li>Forces & Newton's Laws</li>
-
-            <li>Energy & Work</li>
-
-            <li>Momentum</li>
-
-            <li>Waves & Sound</li>
-
-            <li>Light & Optics</li>
-
-            <li>Electricity</li>
-
-            <li>Magnetism</li>
-
-            <li>Gravity</li>
-
-            <li>Heat & Thermodynamics</li>
-
-        </ul>
-
-    </div>
-
-
-
-    <!-- STUDY TIP -->
-
-    <div class="card">
-
-        <h3>💡 Study Tip</h3>
-
-        <p>
-            Always write down the information you know,
-            choose the correct formula, substitute the values,
-            and include the correct units in your final answer.
-        </p>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 1 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 1</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            A car travels 120 km in 2 hours.
-            What is its average speed?
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer1', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer1"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                Speed = Distance ÷ Time
-            </p>
-
-            <p>
-                120 ÷ 2 = <strong>60 km/h</strong>
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 2 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 2</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            A force of 20 N acts on an object with a mass
-            of 5 kg. Find its acceleration.
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer2', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer2"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                F = ma
-            </p>
-
-            <p>
-                a = F ÷ m
-            </p>
-
-            <p>
-                a = 20 ÷ 5
-            </p>
-
-            <p>
-                <strong>4 m/s²</strong>
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 3 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 3</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            An object has a mass of 4 kg and is moving
-            at 5 m/s. Find its kinetic energy.
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer3', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer3"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                KE = ½mv²
-            </p>
-
-            <p>
-                KE = ½ × 4 × 5²
-            </p>
-
-            <p>
-                KE = 2 × 25
-            </p>
-
-            <p>
-                <strong>50 J</strong>
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 4 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 4</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            A wave has a frequency of 5 Hz and a wavelength
-            of 2 m. Find its speed.
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer4', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer4"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                v = fλ
-            </p>
-
-            <p>
-                v = 5 × 2
-            </p>
-
-            <p>
-                <strong>10 m/s</strong>
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 5 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 5</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            An object has a mass of 10 kg.
-            What is its weight on Earth?
-            Use g = 9.8 m/s².
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer5', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer5"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                Weight = mass × gravitational field strength
-            </p>
-
-            <p>
-                W = 10 × 9.8
-            </p>
-
-            <p>
-                <strong>98 N</strong>
-            </p>
-
-        </div>
-
-    </div>
-
+</a>
 
 </div>
 
 
+<div class="welcome-text">
 
-<!-- ================= JAVASCRIPT ================= -->
+<h1>⚛️ Physics</h1>
+
+<p>
+Physics is the study of matter, energy, motion,
+forces and how objects interact with each other.
+Explore important physics concepts through
+explanations, examples and practice questions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📚 What You'll Learn</h3>
+
+<ul>
+
+<li>Motion & Speed</li>
+<li>Forces & Newton's Laws</li>
+<li>Energy & Work</li>
+<li>Momentum</li>
+<li>Waves & Sound</li>
+<li>Light & Optics</li>
+<li>Electricity</li>
+<li>Magnetism</li>
+<li>Gravity</li>
+<li>Heat & Thermodynamics</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>💡 Study Tip</h3>
+
+<p>
+Always write down the information you know,
+choose the correct formula, substitute the values,
+and include the correct units in your final answer.
+</p>
+
+</div>
+
+
+<div class="card" id="question1">
+
+<h3>📝 Example Question 1</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+A car travels 120 km in 2 hours.
+What is its average speed?
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer1',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-physics1"
+onclick="toggleBookmark(
+'physics1',
+'A car travels 120 km in 2 hours. What is its average speed?',
+'Calculate the average speed of a car travelling 120 km in 2 hours.',
+'Science - Physics',
+'physics.html#question1',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer1" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>Speed = Distance ÷ Time</p>
+
+<p>
+120 ÷ 2 = <strong>60 km/h</strong>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question2">
+
+<h3>📝 Example Question 2</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+A force of 20 N acts on an object with a mass
+of 5 kg. Find its acceleration.
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer2',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-physics2"
+onclick="toggleBookmark(
+'physics2',
+'A force of 20 N acts on an object with a mass of 5 kg. Find its acceleration.',
+'Calculate acceleration using force and mass.',
+'Science - Physics',
+'physics.html#question2',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer2" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>F = ma</p>
+
+<p>a = F ÷ m</p>
+
+<p>a = 20 ÷ 5</p>
+
+<p><strong>4 m/s²</strong></p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question3">
+
+<h3>📝 Example Question 3</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+An object has a mass of 4 kg and is moving
+at 5 m/s. Find its kinetic energy.
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer3',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-physics3"
+onclick="toggleBookmark(
+'physics3',
+'An object has a mass of 4 kg and is moving at 5 m/s. Find its kinetic energy.',
+'Calculate the kinetic energy of an object.',
+'Science - Physics',
+'physics.html#question3',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer3" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>KE = ½mv²</p>
+
+<p>KE = ½ × 4 × 5²</p>
+
+<p>KE = 2 × 25</p>
+
+<p><strong>50 J</strong></p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question4">
+
+<h3>📝 Example Question 4</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+A wave has a frequency of 5 Hz and a wavelength
+of 2 m. Find its speed.
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer4',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-physics4"
+onclick="toggleBookmark(
+'physics4',
+'A wave has a frequency of 5 Hz and a wavelength of 2 m. Find its speed.',
+'Calculate wave speed using frequency and wavelength.',
+'Science - Physics',
+'physics.html#question4',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer4" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>v = fλ</p>
+
+<p>v = 5 × 2</p>
+
+<p><strong>10 m/s</strong></p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question5">
+
+<h3>📝 Example Question 5</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+An object has a mass of 10 kg.
+What is its weight on Earth?
+Use g = 9.8 m/s².
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer5',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-physics5"
+onclick="toggleBookmark(
+'physics5',
+'An object has a mass of 10 kg. What is its weight on Earth?',
+'Calculate weight using mass and gravitational field strength.',
+'Science - Physics',
+'physics.html#question5',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer5" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+Weight = mass × gravitational field strength
+</p>
+
+<p>W = 10 × 9.8</p>
+
+<p><strong>98 N</strong></p>
+
+</div>
+
+</div>
+
+</div>
+
 
 <script>
 
-function showAnswer(id, button) {
+function showAnswer(id,button){
 
-    var answer =
-        document.getElementById(id);
+var answer=document.getElementById(id);
 
+if(answer.style.display==="block"){
 
-    if (answer.style.display === "block") {
+answer.style.display="none";
+button.innerHTML="Show Answer";
 
-        answer.style.display = "none";
+}else{
 
-        button.innerHTML = "Show Answer";
-
-    }
-
-    else {
-
-        answer.style.display = "block";
-
-        button.innerHTML = "Hide Answer";
-
-    }
+answer.style.display="block";
+button.innerHTML="Hide Answer";
 
 }
+
+}
+
+
+function toggleBookmark(id,title,description,subject,link,button){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+var existingIndex =
+bookmarks.findIndex(function(bookmark){
+
+return bookmark.id===id;
+
+});
+
+
+if(existingIndex!==-1){
+
+bookmarks.splice(existingIndex,1);
+button.classList.remove("saved");
+
+}else{
+
+bookmarks.push({
+id:id,
+title:title,
+description:description,
+subject:subject,
+link:link
+});
+
+button.classList.add("saved");
+
+}
+
+localStorage.setItem(
+"studyBookmarks",
+JSON.stringify(bookmarks)
+);
+
+}
+
+
+function updateBookmarkButtons(){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+bookmarks.forEach(function(bookmark){
+
+var button =
+document.getElementById("bookmark-"+bookmark.id);
+
+if(button){
+
+button.classList.add("saved");
+
+}
+
+});
+
+}
+
+window.addEventListener("load",function(){
+
+updateBookmarkButtons();
+
+});
 
 </script>
 
 
 </body>
-
 </html>

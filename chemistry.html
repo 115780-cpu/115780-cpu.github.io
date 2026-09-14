@@ -1,366 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry | Study Help Hub</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chemistry | Study Help Hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.bookmark-icon{
+    width:40px;
+    height:40px;
+    border:none;
+    background:transparent;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.2s;
+    margin-left:5px;
+}
+
+.bookmark-icon:hover{
+    background:rgba(0,0,0,0.08);
+    transform:scale(1.1);
+}
+
+.bookmark-icon.saved{
+    background:rgba(30,58,95,0.1);
+}
+
+</style>
+
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
 
 <div class="sidebar">
 
-    <div class="logo-section">
-        <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
-        <h2>Study Help Hub</h2>
-    </div>
+<div class="logo-section">
 
-    <ul>
+<img src="Logo.png" alt="Study Help Hub Logo" class="logo">
 
-        <li>
-            <a href="index.html">
-                <img src="home.png" alt="Home">
-                <span>Home</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="math.html">
-                <img src="Math icon.png" alt="Mathematics">
-                <span>Mathematics</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="science.html">
-                <img src="Science icon.png" alt="Science">
-                <span>Science</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="english.html">
-                <img src="English icon.png" alt="English">
-                <span>English</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="history.html">
-                <img src="History icon.png" alt="History">
-                <span>History</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="ask-question.html">
-                <img src="ask-for-help.png" alt="Ask Question">
-                <span>Ask Question</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="my-questions.html">
-                <img src="My question.png" alt="My Questions">
-                <span>My Questions</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="bookmarks.html">
-                <img src="bookmark.png" alt="Bookmarks">
-                <span>Bookmarks</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="settings.html">
-                <img src="settings.png" alt="Settings">
-                <span>Settings</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="help.html">
-                <img src="help-desk.png" alt="Help & Support">
-                <span>Help & Support</span>
-            </a>
-        </li>
-
-    </ul>
+<h2>Study Help Hub</h2>
 
 </div>
 
 
-<!-- MAIN CONTENT -->
+<ul>
+
+<li>
+<a href="index.html">
+<img src="home.png" alt="Home">
+<span>Home</span>
+</a>
+</li>
+
+<li>
+<a href="math.html">
+<img src="Math icon.png" alt="Mathematics">
+<span>Mathematics</span>
+</a>
+</li>
+
+<li>
+<a href="science.html">
+<img src="Science icon.png" alt="Science">
+<span>Science</span>
+</a>
+</li>
+
+<li>
+<a href="english.html">
+<img src="English icon.png" alt="English">
+<span>English</span>
+</a>
+</li>
+
+<li>
+<a href="history.html">
+<img src="History icon.png" alt="History">
+<span>History</span>
+</a>
+</li>
+
+<li>
+<a href="ask-question.html">
+<img src="ask-for-help.png" alt="Ask Question">
+<span>Ask Question</span>
+</a>
+</li>
+
+<li>
+<a href="my-questions.html">
+<img src="My question.png" alt="My Questions">
+<span>My Questions</span>
+</a>
+</li>
+
+<li>
+<a href="bookmarks.html">
+<img src="bookmark.png" alt="Bookmarks">
+<span>Bookmarks</span>
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<img src="settings.png" alt="Settings">
+<span>Settings</span>
+</a>
+</li>
+
+<li>
+<a href="help.html">
+<img src="help-desk.png" alt="Help & Support">
+<span>Help & Support</span>
+</a>
+</li>
+
+</ul>
+
+</div>
+
 
 <div class="main-content">
 
-    <!-- TOP BAR -->
+<div class="topbar">
 
-    <div class="topbar">
+<input type="text" placeholder="Search Chemistry...">
 
-        <input
-            type="text"
-            placeholder="Search Chemistry..."
-        >
+<a href="profile.html">
 
-        <img
-            src="Profile icon.png"
-            alt="Profile"
-            class="profile"
-        >
+<img
+src="Profile icon.png"
+alt="Profile"
+class="profile">
 
-    </div>
-
-
-    <!-- WELCOME -->
-
-    <div class="welcome-text">
-
-        <h1>⚗️ Chemistry</h1>
-
-        <p>
-            Chemistry is the study of matter, its properties and how
-            substances interact with one another. Explore atoms,
-            elements, compounds, reactions and the changes that happen
-            to substances around us.
-        </p>
-
-    </div>
-
-
-    <!-- WHAT YOU'LL LEARN -->
-
-    <div class="card">
-
-        <h3>📚 What You'll Learn</h3>
-
-        <ul>
-
-            <li>Atoms and Elements</li>
-
-            <li>The Periodic Table</li>
-
-            <li>Compounds and Mixtures</li>
-
-            <li>Chemical Reactions</li>
-
-            <li>Acids and Bases</li>
-
-            <li>States of Matter</li>
-
-            <li>Physical and Chemical Changes</li>
-
-            <li>Laboratory Safety</li>
-
-        </ul>
-
-    </div>
-
-
-    <!-- STUDY TIP -->
-
-    <div class="card">
-
-        <h3>💡 Study Tip</h3>
-
-        <p>
-            Learn the symbols and properties of common elements.
-            Drawing particle diagrams can also help you understand
-            atoms, compounds and chemical reactions more easily.
-        </p>
-
-    </div>
-
-
-    <!-- QUESTION 1 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 1</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            What is the chemical symbol for oxygen?
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer1', this)">
-            Show Answer
-        </button>
-
-        <div id="answer1" class="answer">
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                The chemical symbol for oxygen is
-                <strong>O</strong>.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- QUESTION 2 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 2</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            How many protons does a carbon atom have?
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer2', this)">
-            Show Answer
-        </button>
-
-        <div id="answer2" class="answer">
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                Carbon has <strong>6 protons</strong>.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- QUESTION 3 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 3</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            Is water (H₂O) an element or a compound?
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer3', this)">
-            Show Answer
-        </button>
-
-        <div id="answer3" class="answer">
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                Water is a <strong>compound</strong> because it
-                contains hydrogen and oxygen chemically bonded together.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- QUESTION 4 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 4</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            What pH value is considered neutral?
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer4', this)">
-            Show Answer
-        </button>
-
-        <div id="answer4" class="answer">
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                A neutral substance has a
-                <strong>pH of 7</strong>.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <!-- QUESTION 5 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 5</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            Name the three common states of matter.
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer5', this)">
-            Show Answer
-        </button>
-
-        <div id="answer5" class="answer">
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                The three common states of matter are
-                <strong>solid, liquid and gas</strong>.
-            </p>
-
-        </div>
-
-    </div>
+</a>
 
 </div>
 
 
-<!-- JAVASCRIPT -->
+<div class="welcome-text">
+
+<h1>⚗️ Chemistry</h1>
+
+<p>
+Chemistry is the study of matter, its properties and how
+substances interact with one another. Explore atoms,
+elements, compounds, reactions and the changes that happen
+to substances around us.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📚 What You'll Learn</h3>
+
+<ul>
+
+<li>Atoms and Elements</li>
+<li>The Periodic Table</li>
+<li>Compounds and Mixtures</li>
+<li>Chemical Reactions</li>
+<li>Acids and Bases</li>
+<li>States of Matter</li>
+<li>Physical and Chemical Changes</li>
+<li>Laboratory Safety</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>💡 Study Tip</h3>
+
+<p>
+Learn the symbols and properties of common elements.
+Drawing particle diagrams can also help you understand
+atoms, compounds and chemical reactions more easily.
+</p>
+
+</div>
+
+
+<div class="card" id="question1">
+
+<h3>📝 Example Question 1</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>What is the chemical symbol for oxygen?</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer1',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-chemistry1"
+onclick="toggleBookmark(
+'chemistry1',
+'What is the chemical symbol for oxygen?',
+'What is the chemical symbol for oxygen?',
+'Science - Chemistry',
+'chemistry.html#question1',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer1" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+The chemical symbol for oxygen is <strong>O</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question2">
+
+<h3>📝 Example Question 2</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>How many protons does a carbon atom have?</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer2',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-chemistry2"
+onclick="toggleBookmark(
+'chemistry2',
+'How many protons does a carbon atom have?',
+'How many protons does a carbon atom have?',
+'Science - Chemistry',
+'chemistry.html#question2',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer2" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+Carbon has <strong>6 protons</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question3">
+
+<h3>📝 Example Question 3</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+Is water (H₂O) an element or a compound?
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer3',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-chemistry3"
+onclick="toggleBookmark(
+'chemistry3',
+'Is water an element or a compound?',
+'Is water H2O an element or a compound?',
+'Science - Chemistry',
+'chemistry.html#question3',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer3" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+Water is a <strong>compound</strong> because it contains
+hydrogen and oxygen chemically bonded together.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question4">
+
+<h3>📝 Example Question 4</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>What pH value is considered neutral?</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer4',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-chemistry4"
+onclick="toggleBookmark(
+'chemistry4',
+'What pH value is considered neutral?',
+'What pH value is considered neutral?',
+'Science - Chemistry',
+'chemistry.html#question4',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer4" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+A neutral substance has a <strong>pH of 7</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question5">
+
+<h3>📝 Example Question 5</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>Name the three common states of matter.</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer5',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-chemistry5"
+onclick="toggleBookmark(
+'chemistry5',
+'Name the three common states of matter.',
+'Name the three common states of matter.',
+'Science - Chemistry',
+'chemistry.html#question5',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer5" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+The three common states of matter are
+<strong>solid, liquid and gas</strong>.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 
 <script>
 
-function showAnswer(id, button) {
+function showAnswer(id,button){
 
-    var answer = document.getElementById(id);
+var answer=document.getElementById(id);
 
-    if (answer.style.display === "block") {
+if(answer.style.display==="block"){
 
-        answer.style.display = "none";
+answer.style.display="none";
+button.innerHTML="Show Answer";
 
-        button.innerHTML = "Show Answer";
+}else{
 
-    } else {
-
-        answer.style.display = "block";
-
-        button.innerHTML = "Hide Answer";
-
-    }
+answer.style.display="block";
+button.innerHTML="Hide Answer";
 
 }
+
+}
+
+
+function toggleBookmark(id,title,description,subject,link,button){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+var existingIndex =
+bookmarks.findIndex(function(bookmark){
+
+return bookmark.id===id;
+
+});
+
+
+if(existingIndex!==-1){
+
+bookmarks.splice(existingIndex,1);
+
+button.classList.remove("saved");
+
+}else{
+
+bookmarks.push({
+id:id,
+title:title,
+description:description,
+subject:subject,
+link:link
+});
+
+button.classList.add("saved");
+
+}
+
+localStorage.setItem(
+"studyBookmarks",
+JSON.stringify(bookmarks)
+);
+
+}
+
+
+function updateBookmarkButtons(){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+bookmarks.forEach(function(bookmark){
+
+var button =
+document.getElementById("bookmark-"+bookmark.id);
+
+if(button){
+
+button.classList.add("saved");
+
+}
+
+});
+
+}
+
+
+window.addEventListener("load",function(){
+
+updateBookmarkButtons();
+
+});
 
 </script>
 

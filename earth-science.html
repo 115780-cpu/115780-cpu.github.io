@@ -3,463 +3,488 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Earth Science | Study Help Hub</title>
+<title>Earth Science | Study Help Hub</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.bookmark-icon{
+    width:40px;
+    height:40px;
+    border:none;
+    background:transparent;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.2s;
+    margin-left:5px;
+}
+
+.bookmark-icon:hover{
+    background:rgba(0,0,0,0.08);
+    transform:scale(1.1);
+}
+
+.bookmark-icon.saved{
+    background:rgba(30,58,95,0.1);
+}
+
+</style>
 
 </head>
-
 
 <body>
 
 
-<!-- ================= SIDEBAR ================= -->
-
 <div class="sidebar">
 
+<div class="logo-section">
 
-    <div class="logo-section">
+<img src="Logo.png" alt="Study Help Hub Logo" class="logo">
 
-        <img
-            src="Logo.png"
-            alt="Study Help Hub Logo"
-            class="logo"
-        >
-
-        <h2>Study Help Hub</h2>
-
-    </div>
-
-
-    <ul>
-
-
-        <li>
-            <a href="index.html">
-                <img src="home.png" alt="Home">
-                <span>Home</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="math.html">
-                <img src="Math icon.png" alt="Mathematics">
-                <span>Mathematics</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="science.html">
-                <img src="Science icon.png" alt="Science">
-                <span>Science</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="english.html">
-                <img src="English icon.png" alt="English">
-                <span>English</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="history.html">
-                <img src="History icon.png" alt="History">
-                <span>History</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="ask-question.html">
-                <img src="ask-for-help.png" alt="Ask Question">
-                <span>Ask Question</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="my-questions.html">
-                <img src="My question.png" alt="My Questions">
-                <span>My Questions</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="bookmarks.html">
-                <img src="bookmark.png" alt="Bookmarks">
-                <span>Bookmarks</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="settings.html">
-                <img src="settings.png" alt="Settings">
-                <span>Settings</span>
-            </a>
-        </li>
-
-
-        <li>
-            <a href="help.html">
-                <img src="help-desk.png" alt="Help and Support">
-                <span>Help & Support</span>
-            </a>
-        </li>
-
-
-    </ul>
+<h2>Study Help Hub</h2>
 
 </div>
 
 
+<ul>
 
-<!-- ================= MAIN CONTENT ================= -->
+<li><a href="index.html">
+<img src="home.png" alt="Home">
+<span>Home</span>
+</a></li>
+
+<li><a href="math.html">
+<img src="Math icon.png" alt="Mathematics">
+<span>Mathematics</span>
+</a></li>
+
+<li><a href="science.html">
+<img src="Science icon.png" alt="Science">
+<span>Science</span>
+</a></li>
+
+<li><a href="english.html">
+<img src="English icon.png" alt="English">
+<span>English</span>
+</a></li>
+
+<li><a href="history.html">
+<img src="History icon.png" alt="History">
+<span>History</span>
+</a></li>
+
+<li><a href="ask-question.html">
+<img src="ask-for-help.png" alt="Ask Question">
+<span>Ask Question</span>
+</a></li>
+
+<li><a href="my-questions.html">
+<img src="My question.png" alt="My Questions">
+<span>My Questions</span>
+</a></li>
+
+<li><a href="bookmarks.html">
+<img src="bookmark.png" alt="Bookmarks">
+<span>Bookmarks</span>
+</a></li>
+
+<li><a href="settings.html">
+<img src="settings.png" alt="Settings">
+<span>Settings</span>
+</a></li>
+
+<li><a href="help.html">
+<img src="help-desk.png" alt="Help & Support">
+<span>Help & Support</span>
+</a></li>
+
+</ul>
+
+</div>
+
 
 <div class="main-content">
 
+<div class="topbar">
 
-    <!-- TOP BAR -->
+<input type="text" placeholder="Search Earth Science...">
 
-    <div class="topbar">
+<a href="profile.html">
 
-        <input
-            type="text"
-            placeholder="Search Earth Science..."
-        >
+<img
+src="Profile icon.png"
+alt="Profile"
+class="profile">
 
-        <a
-            href="profile.html"
-            class="profile-link"
-        >
-
-            <img
-                src="Profile icon.png"
-                alt="Profile"
-                class="profile"
-            >
-
-        </a>
-
-    </div>
-
-
-
-    <!-- WELCOME -->
-
-    <div class="welcome-text">
-
-        <h1>🌍 Earth Science</h1>
-
-        <p>
-            Earth Science is the study of our planet, including
-            its rocks, minerals, atmosphere, oceans, weather,
-            climate and natural processes. Explore how Earth
-            changes and how its different systems interact.
-        </p>
-
-    </div>
-
-
-
-    <!-- WHAT YOU'LL LEARN -->
-
-    <div class="card">
-
-        <h3>📚 What You'll Learn</h3>
-
-        <ul>
-
-            <li>Earth's Structure</li>
-
-            <li>Rocks & Minerals</li>
-
-            <li>Plate Tectonics</li>
-
-            <li>Volcanoes</li>
-
-            <li>Earthquakes</li>
-
-            <li>Weather & Climate</li>
-
-            <li>Oceans & Water Cycles</li>
-
-            <li>Atmosphere</li>
-
-            <li>Natural Resources</li>
-
-            <li>Solar System & Space</li>
-
-        </ul>
-
-    </div>
-
-
-
-    <!-- STUDY TIP -->
-
-    <div class="card">
-
-        <h3>💡 Study Tip</h3>
-
-        <p>
-            When studying Earth Science, connect processes
-            together. For example, plate movement can cause
-            earthquakes and volcanic activity, while the water
-            cycle connects the atmosphere, land and oceans.
-        </p>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 1 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 1</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            What are the three main layers of Earth?
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer1', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer1"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                The three main layers are the
-                <strong>crust, mantle and core</strong>.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 2 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 2</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            What causes tectonic plates to move?
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer2', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer2"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                Tectonic plates move because of heat-driven
-                movement within Earth's mantle, including
-                convection and forces acting at plate boundaries.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 3 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 3</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            What is the process called when liquid water
-            changes into water vapour?
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer3', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer3"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                The process is called
-                <strong>evaporation</strong>.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 4 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 4</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            What type of rock forms when magma or lava cools
-            and solidifies?
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer4', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer4"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                It forms an
-                <strong>igneous rock</strong>.
-            </p>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- EXAMPLE QUESTION 5 -->
-
-    <div class="card">
-
-        <h3>📝 Example Question 5</h3>
-
-        <p><strong>Question:</strong></p>
-
-        <p>
-            What instrument is used to measure earthquake
-            vibrations?
-        </p>
-
-
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer5', this)"
-        >
-            Show Answer
-        </button>
-
-
-        <div
-            id="answer5"
-            class="answer"
-        >
-
-            <p><strong>Answer</strong></p>
-
-            <p>
-                A <strong>seismometer</strong> is used to
-                detect and measure ground vibrations caused
-                by earthquakes.
-            </p>
-
-        </div>
-
-    </div>
-
+</a>
 
 </div>
 
 
+<div class="welcome-text">
 
-<!-- ================= JAVASCRIPT ================= -->
+<h1>🌍 Earth Science</h1>
+
+<p>
+Earth Science is the study of our planet, including
+its rocks, minerals, atmosphere, oceans, weather,
+climate and natural processes. Explore how Earth
+changes and how its different systems interact.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>📚 What You'll Learn</h3>
+
+<ul>
+
+<li>Earth's Structure</li>
+<li>Rocks & Minerals</li>
+<li>Plate Tectonics</li>
+<li>Volcanoes</li>
+<li>Earthquakes</li>
+<li>Weather & Climate</li>
+<li>Oceans & Water Cycles</li>
+<li>Atmosphere</li>
+<li>Natural Resources</li>
+<li>Solar System & Space</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>💡 Study Tip</h3>
+
+<p>
+When studying Earth Science, connect processes
+together. For example, plate movement can cause
+earthquakes and volcanic activity, while the water
+cycle connects the atmosphere, land and oceans.
+</p>
+
+</div>
+
+
+<div class="card" id="question1">
+
+<h3>📝 Example Question 1</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>What are the three main layers of Earth?</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer1',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-earth1"
+onclick="toggleBookmark(
+'earth1',
+'What are the three main layers of Earth?',
+'What are the three main layers of Earth?',
+'Science - Earth Science',
+'earth-science.html#question1',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer1" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+The three main layers are the
+<strong>crust, mantle and core</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question2">
+
+<h3>📝 Example Question 2</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>What causes tectonic plates to move?</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer2',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-earth2"
+onclick="toggleBookmark(
+'earth2',
+'What causes tectonic plates to move?',
+'What causes tectonic plates to move?',
+'Science - Earth Science',
+'earth-science.html#question2',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer2" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+Tectonic plates move because of heat-driven
+movement within Earth's mantle, including
+convection and forces acting at plate boundaries.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question3">
+
+<h3>📝 Example Question 3</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+What is the process called when liquid water
+changes into water vapour?
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer3',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-earth3"
+onclick="toggleBookmark(
+'earth3',
+'What process changes liquid water into water vapour?',
+'What process changes liquid water into water vapour?',
+'Science - Earth Science',
+'earth-science.html#question3',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer3" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+The process is called <strong>evaporation</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question4">
+
+<h3>📝 Example Question 4</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+What type of rock forms when magma or lava cools
+and solidifies?
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer4',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-earth4"
+onclick="toggleBookmark(
+'earth4',
+'What type of rock forms when magma or lava cools?',
+'What type of rock forms when magma or lava cools and solidifies?',
+'Science - Earth Science',
+'earth-science.html#question4',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer4" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+It forms an <strong>igneous rock</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card" id="question5">
+
+<h3>📝 Example Question 5</h3>
+
+<p><strong>Question:</strong></p>
+
+<p>
+What instrument is used to measure earthquake
+vibrations?
+</p>
+
+<button class="show-btn"
+onclick="showAnswer('answer5',this)">
+Show Answer
+</button>
+
+<button
+class="bookmark-icon"
+id="bookmark-earth5"
+onclick="toggleBookmark(
+'earth5',
+'What instrument is used to measure earthquake vibrations?',
+'What instrument is used to measure earthquake vibrations?',
+'Science - Earth Science',
+'earth-science.html#question5',
+this
+)"
+aria-label="Bookmark question">
+🔖
+</button>
+
+<div id="answer5" class="answer">
+
+<p><strong>Answer</strong></p>
+
+<p>
+A <strong>seismometer</strong> is used to detect
+and measure ground vibrations caused by earthquakes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 
 <script>
 
-function showAnswer(id, button) {
+function showAnswer(id,button){
 
-    var answer =
-        document.getElementById(id);
+var answer=document.getElementById(id);
 
+if(answer.style.display==="block"){
 
-    if (answer.style.display === "block") {
+answer.style.display="none";
+button.innerHTML="Show Answer";
 
-        answer.style.display = "none";
+}else{
 
-        button.innerHTML = "Show Answer";
-
-    }
-
-    else {
-
-        answer.style.display = "block";
-
-        button.innerHTML = "Hide Answer";
-
-    }
+answer.style.display="block";
+button.innerHTML="Hide Answer";
 
 }
 
+}
+
+
+function toggleBookmark(id,title,description,subject,link,button){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+var existingIndex =
+bookmarks.findIndex(function(bookmark){
+
+return bookmark.id===id;
+
+});
+
+
+if(existingIndex!==-1){
+
+bookmarks.splice(existingIndex,1);
+button.classList.remove("saved");
+
+}else{
+
+bookmarks.push({
+id:id,
+title:title,
+description:description,
+subject:subject,
+link:link
+});
+
+button.classList.add("saved");
+
+}
+
+localStorage.setItem(
+"studyBookmarks",
+JSON.stringify(bookmarks)
+);
+
+}
+
+
+function updateBookmarkButtons(){
+
+var bookmarks =
+JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+bookmarks.forEach(function(bookmark){
+
+var button =
+document.getElementById("bookmark-"+bookmark.id);
+
+if(button){
+
+button.classList.add("saved");
+
+}
+
+});
+
+}
+
+window.addEventListener("load",function(){
+
+updateBookmarkButtons();
+
+});
+
 </script>
 
-
 </body>
-
 </html>

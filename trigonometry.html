@@ -2,44 +2,52 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English | Study Help Hub</title>
+
+    <title>Trigonometry | Study Help Hub</title>
+
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .bookmark-icon{
-            width:40px;
-            height:40px;
-            border:none;
-            background:transparent;
-            font-size:22px;
-            cursor:pointer;
-            border-radius:50%;
-            transition:0.2s;
-            margin-left:5px;
+
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
         }
 
-        .bookmark-icon:hover{
-            background:rgba(0,0,0,0.08);
-            transform:scale(1.1);
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
         }
 
-        .bookmark-icon.saved{
-            background:rgba(30,58,95,0.1);
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
         }
+
     </style>
+
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
-
 <div class="sidebar">
 
     <div class="logo-section">
+
         <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
+
         <h2>Study Help Hub</h2>
+
     </div>
 
     <ul>
@@ -119,45 +127,37 @@
 </div>
 
 
-<!-- MAIN CONTENT -->
-
 <div class="main-content">
-
-    <!-- TOP BAR -->
 
     <div class="topbar">
 
         <input
             type="text"
-            placeholder="Search English topics..."
+            id="trigSearch"
+            placeholder="Search Trigonometry..."
+            onkeyup="searchTrig()"
         >
 
-        <img
-            src="Profile icon.png"
-            alt="Profile"
-            class="profile"
-        >
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
 
     </div>
 
 
-    <!-- WELCOME -->
-
     <div class="welcome-text">
 
-        <h1>📖 English</h1>
+        <h1>➕ Trigonometry</h1>
 
         <p>
-            Welcome to the English section of Study Help Hub.
-            Explore reading, writing, grammar, literature and
-            communication skills through explanations, examples
-            and practice questions.
+            Trigonometry is the branch of mathematics that studies the
+            relationships between angles and sides of triangles. It is
+            widely used in engineering, architecture, navigation,
+            astronomy, computer graphics, surveying, and physics.
         </p>
 
     </div>
 
-
-    <!-- WHAT YOU'LL LEARN -->
 
     <div class="card">
 
@@ -165,83 +165,81 @@
 
         <ul>
 
-            <li>Reading Comprehension</li>
-
-            <li>Creative Writing</li>
-
-            <li>Essay Writing</li>
-
-            <li>Grammar and Punctuation</li>
-
-            <li>Vocabulary</li>
-
-            <li>Poetry</li>
-
-            <li>Literature</li>
-
-            <li>Speaking and Communication</li>
+            <li>Right-Angled Triangles</li>
+            <li>SOH CAH TOA</li>
+            <li>Sine, Cosine and Tangent</li>
+            <li>Finding Missing Sides</li>
+            <li>Finding Missing Angles</li>
+            <li>Angles of Elevation & Depression</li>
+            <li>Bearings</li>
+            <li>Real-Life Applications of Trigonometry</li>
 
         </ul>
 
     </div>
 
 
-    <!-- STUDY TIP -->
-
     <div class="card">
 
         <h3>💡 Study Tip</h3>
 
         <p>
-            When analysing a text, always support your ideas with
-            evidence from the text. Explain how the evidence supports
-            your point rather than simply describing what happens.
+            Remember the mnemonic <strong>SOH CAH TOA</strong> to choose
+            the correct trigonometric ratio. Always identify the
+            opposite, adjacent, and hypotenuse before solving a problem.
         </p>
 
     </div>
 
 
-    <!-- QUESTION 1 -->
+    <!-- Question 1 -->
 
-    <div class="card" id="question1">
+    <div class="card trig-question" id="question1">
 
         <h3>📝 Example Question 1</h3>
 
         <p><strong>Question:</strong></p>
 
         <p>
-            What is a metaphor?
+            A right triangle has an opposite side of 6 cm and a
+            hypotenuse of 10 cm.
         </p>
 
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer1', this)">
+        <p>Find the value of sin θ.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer1', this)">
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english1"
+            id="bookmark-trigonometry1"
             onclick="toggleBookmark(
-                'english1',
-                'What is a metaphor?',
-                'What is a metaphor?',
-                'English',
-                'english.html#question1',
+                'trigonometry1',
+                'Find the value of sin θ',
+                'Opposite side = 6 cm and hypotenuse = 10 cm.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question1',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer1" class="answer">
 
             <p><strong>Answer</strong></p>
 
+            <p>sin θ = Opposite ÷ Hypotenuse</p>
+
             <p>
-                A metaphor compares two different things by saying
-                that one thing is another, without using "like" or
-                "as".
+                sin θ = 6 ÷ 10 = <strong>0.6</strong>
             </p>
 
         </div>
@@ -249,47 +247,54 @@
     </div>
 
 
-    <!-- QUESTION 2 -->
+    <!-- Question 2 -->
 
-    <div class="card" id="question2">
+    <div class="card trig-question" id="question2">
 
         <h3>📝 Example Question 2</h3>
 
         <p><strong>Question:</strong></p>
 
         <p>
-            What is the purpose of a topic sentence?
+            A right triangle has an adjacent side of 8 cm and a
+            hypotenuse of 10 cm.
         </p>
 
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer2', this)">
+        <p>Find cos θ.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer2', this)">
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english2"
+            id="bookmark-trigonometry2"
             onclick="toggleBookmark(
-                'english2',
-                'What is the purpose of a topic sentence?',
-                'What is the purpose of a topic sentence?',
-                'English',
-                'english.html#question2',
+                'trigonometry2',
+                'Find cos θ',
+                'Adjacent side = 8 cm and hypotenuse = 10 cm.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question2',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer2" class="answer">
 
             <p><strong>Answer</strong></p>
 
+            <p>cos θ = Adjacent ÷ Hypotenuse</p>
+
             <p>
-                A topic sentence introduces the main idea of a
-                paragraph and helps the reader understand what
-                the paragraph will be about.
+                cos θ = 8 ÷ 10 = <strong>0.8</strong>
             </p>
 
         </div>
@@ -297,47 +302,54 @@
     </div>
 
 
-    <!-- QUESTION 3 -->
+    <!-- Question 3 -->
 
-    <div class="card" id="question3">
+    <div class="card trig-question" id="question3">
 
         <h3>📝 Example Question 3</h3>
 
         <p><strong>Question:</strong></p>
 
         <p>
-            What is the difference between a simile and a metaphor?
+            A right triangle has an opposite side of 12 cm and an
+            adjacent side of 5 cm.
         </p>
 
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer3', this)">
+        <p>Find tan θ.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer3', this)">
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english3"
+            id="bookmark-trigonometry3"
             onclick="toggleBookmark(
-                'english3',
-                'What is the difference between a simile and a metaphor?',
-                'What is the difference between a simile and a metaphor?',
-                'English',
-                'english.html#question3',
+                'trigonometry3',
+                'Find tan θ',
+                'Opposite side = 12 cm and adjacent side = 5 cm.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question3',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer3" class="answer">
 
             <p><strong>Answer</strong></p>
 
+            <p>tan θ = Opposite ÷ Adjacent</p>
+
             <p>
-                A simile compares things using words such as
-                <strong>"like"</strong> or <strong>"as"</strong>,
-                while a metaphor makes a direct comparison.
+                tan θ = 12 ÷ 5 = <strong>2.4</strong>
             </p>
 
         </div>
@@ -345,95 +357,112 @@
     </div>
 
 
-    <!-- QUESTION 4 -->
+    <!-- Question 4 -->
 
-    <div class="card" id="question4">
+    <div class="card trig-question" id="question4">
 
         <h3>📝 Example Question 4</h3>
 
         <p><strong>Question:</strong></p>
 
         <p>
-            What is the purpose of a conclusion in an essay?
+            A ladder is 5 m long and leans against a wall. The base of
+            the ladder is 3 m from the wall.
         </p>
 
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer4', this)">
+        <p>How high does the ladder reach?</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer4', this)">
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english4"
+            id="bookmark-trigonometry4"
             onclick="toggleBookmark(
-                'english4',
-                'What is the purpose of a conclusion in an essay?',
-                'What is the purpose of a conclusion in an essay?',
-                'English',
-                'english.html#question4',
+                'trigonometry4',
+                'Find the height reached by a ladder',
+                'A 5 m ladder has its base 3 m from the wall.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question4',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer4" class="answer">
 
             <p><strong>Answer</strong></p>
 
-            <p>
-                A conclusion summarises the main ideas of an essay
-                and gives the reader a final understanding of the
-                writer's argument or ideas.
-            </p>
+            <p>Using Pythagoras:</p>
+
+            <p>Height² = 5² − 3²</p>
+
+            <p>Height² = 25 − 9 = 16</p>
+
+            <p>Height = <strong>4 m</strong></p>
 
         </div>
 
     </div>
 
 
-    <!-- QUESTION 5 -->
+    <!-- Question 5 -->
 
-    <div class="card" id="question5">
+    <div class="card trig-question" id="question5">
 
         <h3>📝 Example Question 5</h3>
 
         <p><strong>Question:</strong></p>
 
         <p>
-            What is personification?
+            A tree casts a shadow 10 m long. The angle of elevation of
+            the Sun is 45°.
         </p>
 
-        <button
-            class="show-btn"
-            onclick="showAnswer('answer5', this)">
+        <p>Find the height of the tree.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer5', this)">
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english5"
+            id="bookmark-trigonometry5"
             onclick="toggleBookmark(
-                'english5',
-                'What is personification?',
-                'What is personification?',
-                'English',
-                'english.html#question5',
+                'trigonometry5',
+                'Find the height of a tree',
+                'A tree casts a 10 m shadow at an angle of elevation of 45°.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question5',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer5" class="answer">
 
             <p><strong>Answer</strong></p>
 
-            <p>
-                Personification gives human characteristics,
-                actions or feelings to non-human things.
-            </p>
+            <p>tan 45° = Height ÷ 10</p>
+
+            <p>1 = Height ÷ 10</p>
+
+            <p>Height = <strong>10 m</strong></p>
 
         </div>
 
@@ -441,8 +470,6 @@
 
 </div>
 
-
-<!-- JAVASCRIPT -->
 
 <script>
 
@@ -453,13 +480,11 @@ function showAnswer(id, button) {
     if (answer.style.display === "block") {
 
         answer.style.display = "none";
-
         button.innerHTML = "Show Answer";
 
     } else {
 
         answer.style.display = "block";
-
         button.innerHTML = "Hide Answer";
 
     }
@@ -472,34 +497,37 @@ function toggleBookmark(id, title, description, subject, link, button) {
     var bookmarks =
         JSON.parse(localStorage.getItem("studyBookmarks")) || [];
 
+
     var existingIndex =
         bookmarks.findIndex(function(bookmark) {
+
             return bookmark.id === id;
+
         });
+
 
     if (existingIndex !== -1) {
 
         bookmarks.splice(existingIndex, 1);
-
-        button.innerHTML = "🔖";
 
         button.classList.remove("saved");
 
     } else {
 
         bookmarks.push({
+
             id: id,
             title: title,
             description: description,
             subject: subject,
             link: link
-        });
 
-        button.innerHTML = "🔖";
+        });
 
         button.classList.add("saved");
 
     }
+
 
     localStorage.setItem(
         "studyBookmarks",
@@ -514,18 +542,46 @@ function updateBookmarkButtons() {
     var bookmarks =
         JSON.parse(localStorage.getItem("studyBookmarks")) || [];
 
+
     bookmarks.forEach(function(bookmark) {
 
         var button =
-            document.getElementById("bookmark-" + bookmark.id);
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
 
         if (button) {
 
             button.classList.add("saved");
 
-            button.innerHTML = "🔖";
-
         }
+
+    });
+
+}
+
+
+function searchTrig() {
+
+    var search =
+        document.getElementById("trigSearch")
+        .value
+        .toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(".trig-question");
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        question.style.display =
+            text.includes(search) ? "block" : "none";
 
     });
 

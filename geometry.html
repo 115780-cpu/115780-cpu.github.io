@@ -2,44 +2,54 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English | Study Help Hub</title>
+
+    <title>Geometry | Study Help Hub</title>
+
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .bookmark-icon{
-            width:40px;
-            height:40px;
-            border:none;
-            background:transparent;
-            font-size:22px;
-            cursor:pointer;
-            border-radius:50%;
-            transition:0.2s;
-            margin-left:5px;
+
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
         }
 
-        .bookmark-icon:hover{
-            background:rgba(0,0,0,0.08);
-            transform:scale(1.1);
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
         }
 
-        .bookmark-icon.saved{
-            background:rgba(30,58,95,0.1);
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
         }
+
     </style>
+
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
+<!-- Sidebar -->
 
 <div class="sidebar">
 
     <div class="logo-section">
+
         <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
+
         <h2>Study Help Hub</h2>
+
     </div>
 
     <ul>
@@ -119,45 +129,39 @@
 </div>
 
 
-<!-- MAIN CONTENT -->
+<!-- Main Content -->
 
 <div class="main-content">
-
-    <!-- TOP BAR -->
 
     <div class="topbar">
 
         <input
             type="text"
-            placeholder="Search English topics..."
+            id="geometrySearch"
+            placeholder="Search Geometry..."
+            onkeyup="searchGeometry()"
         >
 
-        <img
-            src="Profile icon.png"
-            alt="Profile"
-            class="profile"
-        >
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
 
     </div>
 
 
-    <!-- WELCOME -->
-
     <div class="welcome-text">
 
-        <h1>📖 English</h1>
+        <h1>➕ Geometry</h1>
 
         <p>
-            Welcome to the English section of Study Help Hub.
-            Explore reading, writing, grammar, literature and
-            communication skills through explanations, examples
-            and practice questions.
+            Geometry is the branch of mathematics that studies shapes,
+            angles, lines, distances, area, volume, and space. It is used
+            in architecture, engineering, design, construction, and
+            everyday life.
         </p>
 
     </div>
 
-
-    <!-- WHAT YOU'LL LEARN -->
 
     <div class="card">
 
@@ -165,53 +169,45 @@
 
         <ul>
 
-            <li>Reading Comprehension</li>
-
-            <li>Creative Writing</li>
-
-            <li>Essay Writing</li>
-
-            <li>Grammar and Punctuation</li>
-
-            <li>Vocabulary</li>
-
-            <li>Poetry</li>
-
-            <li>Literature</li>
-
-            <li>Speaking and Communication</li>
+            <li>Lines & Angles</li>
+            <li>Triangles</li>
+            <li>Quadrilaterals</li>
+            <li>Circles</li>
+            <li>Polygons</li>
+            <li>Area & Perimeter</li>
+            <li>Volume & Surface Area</li>
+            <li>Pythagorean Theorem</li>
 
         </ul>
 
     </div>
 
 
-    <!-- STUDY TIP -->
-
     <div class="card">
 
         <h3>💡 Study Tip</h3>
 
         <p>
-            When analysing a text, always support your ideas with
-            evidence from the text. Explain how the evidence supports
-            your point rather than simply describing what happens.
+            Draw a clear diagram and label all known lengths and angles
+            before solving a problem. A well-labelled diagram makes it
+            much easier to choose the correct formula and avoid mistakes.
         </p>
 
     </div>
 
 
-    <!-- QUESTION 1 -->
+    <!-- Question 1 -->
 
-    <div class="card" id="question1">
+    <div class="card geometry-question" id="question1">
 
         <h3>📝 Example Question 1</h3>
 
         <p><strong>Question:</strong></p>
 
-        <p>
-            What is a metaphor?
-        </p>
+        <p>Find the missing angle in a triangle.</p>
+
+        <p>Two angles are 60° and 70°.</p>
+
 
         <button
             class="show-btn"
@@ -219,29 +215,31 @@
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english1"
+            id="bookmark-geometry1"
             onclick="toggleBookmark(
-                'english1',
-                'What is a metaphor?',
-                'What is a metaphor?',
-                'English',
-                'english.html#question1',
+                'geometry1',
+                'Find the missing angle in a triangle',
+                'Two angles are 60° and 70°.',
+                'Mathematics - Geometry',
+                'Geometry.html#question1',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer1" class="answer">
 
             <p><strong>Answer</strong></p>
 
             <p>
-                A metaphor compares two different things by saying
-                that one thing is another, without using "like" or
-                "as".
+                180° − 60° − 70° = <strong>50°</strong>
             </p>
 
         </div>
@@ -249,17 +247,18 @@
     </div>
 
 
-    <!-- QUESTION 2 -->
+    <!-- Question 2 -->
 
-    <div class="card" id="question2">
+    <div class="card geometry-question" id="question2">
 
         <h3>📝 Example Question 2</h3>
 
         <p><strong>Question:</strong></p>
 
-        <p>
-            What is the purpose of a topic sentence?
-        </p>
+        <p>Find the area of a rectangle.</p>
+
+        <p>Length = 12 cm, Width = 8 cm.</p>
+
 
         <button
             class="show-btn"
@@ -267,29 +266,33 @@
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english2"
+            id="bookmark-geometry2"
             onclick="toggleBookmark(
-                'english2',
-                'What is the purpose of a topic sentence?',
-                'What is the purpose of a topic sentence?',
-                'English',
-                'english.html#question2',
+                'geometry2',
+                'Find the area of a rectangle',
+                'Length = 12 cm, Width = 8 cm.',
+                'Mathematics - Geometry',
+                'Geometry.html#question2',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer2" class="answer">
 
             <p><strong>Answer</strong></p>
 
+            <p>Area = Length × Width</p>
+
             <p>
-                A topic sentence introduces the main idea of a
-                paragraph and helps the reader understand what
-                the paragraph will be about.
+                12 × 8 = <strong>96 cm²</strong>
             </p>
 
         </div>
@@ -297,17 +300,18 @@
     </div>
 
 
-    <!-- QUESTION 3 -->
+    <!-- Question 3 -->
 
-    <div class="card" id="question3">
+    <div class="card geometry-question" id="question3">
 
         <h3>📝 Example Question 3</h3>
 
         <p><strong>Question:</strong></p>
 
-        <p>
-            What is the difference between a simile and a metaphor?
-        </p>
+        <p>A right triangle has sides of 6 cm and 8 cm.</p>
+
+        <p>Find the hypotenuse.</p>
+
 
         <button
             class="show-btn"
@@ -315,29 +319,35 @@
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english3"
+            id="bookmark-geometry3"
             onclick="toggleBookmark(
-                'english3',
-                'What is the difference between a simile and a metaphor?',
-                'What is the difference between a simile and a metaphor?',
-                'English',
-                'english.html#question3',
+                'geometry3',
+                'Find the hypotenuse of a right triangle',
+                'A right triangle has sides of 6 cm and 8 cm.',
+                'Mathematics - Geometry',
+                'Geometry.html#question3',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer3" class="answer">
 
             <p><strong>Answer</strong></p>
 
             <p>
-                A simile compares things using words such as
-                <strong>"like"</strong> or <strong>"as"</strong>,
-                while a metaphor makes a direct comparison.
+                6² + 8² = 36 + 64 = 100
+            </p>
+
+            <p>
+                √100 = <strong>10 cm</strong>
             </p>
 
         </div>
@@ -345,17 +355,18 @@
     </div>
 
 
-    <!-- QUESTION 4 -->
+    <!-- Question 4 -->
 
-    <div class="card" id="question4">
+    <div class="card geometry-question" id="question4">
 
         <h3>📝 Example Question 4</h3>
 
         <p><strong>Question:</strong></p>
 
         <p>
-            What is the purpose of a conclusion in an essay?
+            Find the circumference of a circle with a radius of 7 cm.
         </p>
+
 
         <button
             class="show-btn"
@@ -363,29 +374,33 @@
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english4"
+            id="bookmark-geometry4"
             onclick="toggleBookmark(
-                'english4',
-                'What is the purpose of a conclusion in an essay?',
-                'What is the purpose of a conclusion in an essay?',
-                'English',
-                'english.html#question4',
+                'geometry4',
+                'Find the circumference of a circle',
+                'Find the circumference when the radius is 7 cm.',
+                'Mathematics - Geometry',
+                'Geometry.html#question4',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer4" class="answer">
 
             <p><strong>Answer</strong></p>
 
+            <p>C = 2 × π × r</p>
+
             <p>
-                A conclusion summarises the main ideas of an essay
-                and gives the reader a final understanding of the
-                writer's argument or ideas.
+                C = 2 × π × 7 ≈ <strong>43.98 cm</strong>
             </p>
 
         </div>
@@ -393,17 +408,18 @@
     </div>
 
 
-    <!-- QUESTION 5 -->
+    <!-- Question 5 -->
 
-    <div class="card" id="question5">
+    <div class="card geometry-question" id="question5">
 
         <h3>📝 Example Question 5</h3>
 
         <p><strong>Question:</strong></p>
 
         <p>
-            What is personification?
+            Find the sum of the interior angles of a hexagon.
         </p>
+
 
         <button
             class="show-btn"
@@ -411,28 +427,31 @@
             Show Answer
         </button>
 
+
         <button
             class="bookmark-icon"
-            id="bookmark-english5"
+            id="bookmark-geometry5"
             onclick="toggleBookmark(
-                'english5',
-                'What is personification?',
-                'What is personification?',
-                'English',
-                'english.html#question5',
+                'geometry5',
+                'Find the sum of the interior angles of a hexagon',
+                'Find the sum of the interior angles of a hexagon.',
+                'Mathematics - Geometry',
+                'Geometry.html#question5',
                 this
             )"
             aria-label="Bookmark question">
+
             🔖
+
         </button>
+
 
         <div id="answer5" class="answer">
 
             <p><strong>Answer</strong></p>
 
             <p>
-                Personification gives human characteristics,
-                actions or feelings to non-human things.
+                (6 − 2) × 180 = <strong>720°</strong>
             </p>
 
         </div>
@@ -442,9 +461,9 @@
 </div>
 
 
-<!-- JAVASCRIPT -->
-
 <script>
+
+/* Show Answer */
 
 function showAnswer(id, button) {
 
@@ -467,39 +486,44 @@ function showAnswer(id, button) {
 }
 
 
+/* Bookmark */
+
 function toggleBookmark(id, title, description, subject, link, button) {
 
     var bookmarks =
         JSON.parse(localStorage.getItem("studyBookmarks")) || [];
 
+
     var existingIndex =
         bookmarks.findIndex(function(bookmark) {
+
             return bookmark.id === id;
+
         });
+
 
     if (existingIndex !== -1) {
 
         bookmarks.splice(existingIndex, 1);
-
-        button.innerHTML = "🔖";
 
         button.classList.remove("saved");
 
     } else {
 
         bookmarks.push({
+
             id: id,
             title: title,
             description: description,
             subject: subject,
             link: link
-        });
 
-        button.innerHTML = "🔖";
+        });
 
         button.classList.add("saved");
 
     }
+
 
     localStorage.setItem(
         "studyBookmarks",
@@ -509,21 +533,60 @@ function toggleBookmark(id, title, description, subject, link, button) {
 }
 
 
+/* Check saved bookmarks */
+
 function updateBookmarkButtons() {
 
     var bookmarks =
         JSON.parse(localStorage.getItem("studyBookmarks")) || [];
 
+
     bookmarks.forEach(function(bookmark) {
 
         var button =
-            document.getElementById("bookmark-" + bookmark.id);
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
 
         if (button) {
 
             button.classList.add("saved");
 
-            button.innerHTML = "🔖";
+        }
+
+    });
+
+}
+
+
+/* Search */
+
+function searchGeometry() {
+
+    var search =
+        document.getElementById("geometrySearch")
+        .value
+        .toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(".geometry-question");
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        if (text.includes(search)) {
+
+            question.style.display = "block";
+
+        } else {
+
+            question.style.display = "none";
 
         }
 

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arithmetic | Study Help Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
+        }
+
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
+        }
+
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo-section">
+
+        <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
+
+        <h2>Study Help Hub</h2>
+
+    </div>
+
+    <ul>
+
+        <li><a href="index.html"><img src="home.png"><span>Home</span></a></li>
+
+        <li><a href="math.html"><img src="Math icon.png"><span>Mathematics</span></a></li>
+
+        <li><a href="science.html"><img src="Science icon.png"><span>Science</span></a></li>
+
+        <li><a href="english.html"><img src="English icon.png"><span>English</span></a></li>
+
+        <li><a href="history.html"><img src="History icon.png"><span>History</span></a></li>
+
+        <li><a href="ask-question.html"><img src="ask-for-help.png"><span>Ask Question</span></a></li>
+
+        <li><a href="my-questions.html"><img src="My question.png"><span>My Questions</span></a></li>
+
+        <li><a href="bookmarks.html"><img src="bookmark.png"><span>Bookmarks</span></a></li>
+
+        <li><a href="settings.html"><img src="settings.png"><span>Settings</span></a></li>
+
+        <li><a href="help.html"><img src="help-desk.png"><span>Help & Support</span></a></li>
+
+    </ul>
+
+</div>
+
+
+<div class="main-content">
+
+    <div class="topbar">
+
+        <input
+            type="text"
+            id="arithmeticSearch"
+            placeholder="Search Arithmetic..."
+            onkeyup="searchArithmetic()"
+        >
+
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
+
+    </div>
+
+
+    <div class="welcome-text">
+
+        <h1>➕ Arithmetic</h1>
+
+        <p>
+            Arithmetic is the foundation of mathematics. It involves
+            working with numbers using addition, subtraction,
+            multiplication, and division.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>📚 What You'll Learn</h3>
+
+        <ul>
+
+            <li>Addition</li>
+            <li>Subtraction</li>
+            <li>Multiplication</li>
+            <li>Division</li>
+            <li>Fractions</li>
+            <li>Decimals</li>
+            <li>Percentages</li>
+            <li>Order of Operations (BODMAS/PEMDAS)</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>💡 Study Tip</h3>
+
+        <p>
+            Always check your calculations carefully and remember the
+            order of operations (BODMAS/PEMDAS). Practising regularly
+            can improve your speed and accuracy.
+        </p>
+
+    </div>
+
+
+    <!-- Question 1 -->
+
+    <div class="card arithmetic-question" id="question1">
+
+        <h3>📝 Example Question 1</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Calculate:</p>
+
+        <h2>458 + 276</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer1', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-arithmetic1"
+            onclick="toggleBookmark(
+                'arithmetic1',
+                'Calculate 458 + 276',
+                'Calculate 458 + 276.',
+                'Mathematics - Arithmetic',
+                'Arithmetic.html#question1',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer1" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                458 + 276 = <strong>734</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 2 -->
+
+    <div class="card arithmetic-question" id="question2">
+
+        <h3>📝 Example Question 2</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Calculate:</p>
+
+        <h2>963 − 487</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer2', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-arithmetic2"
+            onclick="toggleBookmark(
+                'arithmetic2',
+                'Calculate 963 − 487',
+                'Calculate 963 − 487.',
+                'Mathematics - Arithmetic',
+                'Arithmetic.html#question2',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer2" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                963 − 487 = <strong>476</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 3 -->
+
+    <div class="card arithmetic-question" id="question3">
+
+        <h3>📝 Example Question 3</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Calculate:</p>
+
+        <h2>36 × 24</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer3', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-arithmetic3"
+            onclick="toggleBookmark(
+                'arithmetic3',
+                'Calculate 36 × 24',
+                'Calculate 36 × 24.',
+                'Mathematics - Arithmetic',
+                'Arithmetic.html#question3',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer3" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                36 × 24 = <strong>864</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 4 -->
+
+    <div class="card arithmetic-question" id="question4">
+
+        <h3>📝 Example Question 4</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Calculate:</p>
+
+        <h2>144 ÷ 12</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer4', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-arithmetic4"
+            onclick="toggleBookmark(
+                'arithmetic4',
+                'Calculate 144 ÷ 12',
+                'Calculate 144 ÷ 12.',
+                'Mathematics - Arithmetic',
+                'Arithmetic.html#question4',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer4" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                144 ÷ 12 = <strong>12</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 5 -->
+
+    <div class="card arithmetic-question" id="question5">
+
+        <h3>📝 Example Question 5</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            Solve using the correct order of operations:
+        </p>
+
+        <h2>8 + 4 × 5</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer5', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-arithmetic5"
+            onclick="toggleBookmark(
+                'arithmetic5',
+                'Solve 8 + 4 × 5',
+                'Solve using the correct order of operations.',
+                'Mathematics - Arithmetic',
+                'Arithmetic.html#question5',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer5" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>Multiply first:</p>
+
+            <p>4 × 5 = 20</p>
+
+            <p>
+                8 + 20 = <strong>28</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function showAnswer(id, button) {
+
+    var answer = document.getElementById(id);
+
+    if (answer.style.display === "block") {
+
+        answer.style.display = "none";
+        button.innerHTML = "Show Answer";
+
+    } else {
+
+        answer.style.display = "block";
+        button.innerHTML = "Hide Answer";
+
+    }
+
+}
+
+
+function toggleBookmark(id, title, description, subject, link, button) {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    var existingIndex =
+        bookmarks.findIndex(function(bookmark) {
+
+            return bookmark.id === id;
+
+        });
+
+
+    if (existingIndex !== -1) {
+
+        bookmarks.splice(existingIndex, 1);
+
+        button.classList.remove("saved");
+
+    } else {
+
+        bookmarks.push({
+
+            id: id,
+            title: title,
+            description: description,
+            subject: subject,
+            link: link
+
+        });
+
+        button.classList.add("saved");
+
+    }
+
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+}
+
+
+function updateBookmarkButtons() {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    bookmarks.forEach(function(bookmark) {
+
+        var button =
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
+
+        if (button) {
+
+            button.classList.add("saved");
+
+        }
+
+    });
+
+}
+
+
+function searchArithmetic() {
+
+    var search =
+        document.getElementById("arithmeticSearch")
+        .value
+        .toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(".arithmetic-question");
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        question.style.display =
+            text.includes(search) ? "block" : "none";
+
+    });
+
+}
+
+
+window.addEventListener("load", function() {
+
+    updateBookmarkButtons();
+
+});
+
+</script>
+
+</body>
+</html>

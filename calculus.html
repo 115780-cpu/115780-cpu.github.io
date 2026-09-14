@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculus | Study Help Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
+        }
+
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
+        }
+
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo-section">
+
+        <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
+
+        <h2>Study Help Hub</h2>
+
+    </div>
+
+    <ul>
+
+        <li><a href="index.html"><img src="home.png"><span>Home</span></a></li>
+
+        <li><a href="math.html"><img src="Math icon.png"><span>Mathematics</span></a></li>
+
+        <li><a href="science.html"><img src="Science icon.png"><span>Science</span></a></li>
+
+        <li><a href="english.html"><img src="English icon.png"><span>English</span></a></li>
+
+        <li><a href="history.html"><img src="History icon.png"><span>History</span></a></li>
+
+        <li><a href="ask-question.html"><img src="ask-for-help.png"><span>Ask Question</span></a></li>
+
+        <li><a href="my-questions.html"><img src="My question.png"><span>My Questions</span></a></li>
+
+        <li><a href="bookmarks.html"><img src="bookmark.png"><span>Bookmarks</span></a></li>
+
+        <li><a href="settings.html"><img src="settings.png"><span>Settings</span></a></li>
+
+        <li><a href="help.html"><img src="help-desk.png"><span>Help & Support</span></a></li>
+
+    </ul>
+
+</div>
+
+
+<div class="main-content">
+
+    <div class="topbar">
+
+        <input
+            type="text"
+            id="calculusSearch"
+            placeholder="Search Calculus..."
+            onkeyup="searchCalculus()"
+        >
+
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
+
+    </div>
+
+
+    <div class="welcome-text">
+
+        <h1>➕ Calculus</h1>
+
+        <p>
+            Calculus is the branch of mathematics that studies change
+            and motion. It focuses on rates of change and accumulation
+            of quantities.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>📚 What You'll Learn</h3>
+
+        <ul>
+
+            <li>Limits</li>
+            <li>Derivatives</li>
+            <li>Differentiation Rules</li>
+            <li>Applications of Derivatives</li>
+            <li>Integration</li>
+            <li>Area Under a Curve</li>
+            <li>Rates of Change</li>
+            <li>Real-World Applications of Calculus</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>💡 Study Tip</h3>
+
+        <p>
+            Learn the basic differentiation and integration rules before
+            tackling complex problems. Showing each step clearly will
+            help you understand how each rule is applied.
+        </p>
+
+    </div>
+
+
+    <!-- Question 1 -->
+
+    <div class="card calculus-question" id="question1">
+
+        <h3>📝 Example Question 1</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Find the derivative of:</p>
+
+        <h2>f(x) = x²</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer1', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-calculus1"
+            onclick="toggleBookmark(
+                'calculus1',
+                'Find the derivative of x²',
+                'Find the derivative of f(x) = x².',
+                'Mathematics - Calculus',
+                'Calculus.html#question1',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer1" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>Using the power rule:</p>
+
+            <p>
+                f'(x) = <strong>2x</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 2 -->
+
+    <div class="card calculus-question" id="question2">
+
+        <h3>📝 Example Question 2</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Find the derivative of:</p>
+
+        <h2>f(x) = 4x³</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer2', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-calculus2"
+            onclick="toggleBookmark(
+                'calculus2',
+                'Find the derivative of 4x³',
+                'Find the derivative of f(x) = 4x³.',
+                'Mathematics - Calculus',
+                'Calculus.html#question2',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer2" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                f'(x) = <strong>12x²</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 3 -->
+
+    <div class="card calculus-question" id="question3">
+
+        <h3>📝 Example Question 3</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Evaluate the integral:</p>
+
+        <h2>∫ 2x dx</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer3', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-calculus3"
+            onclick="toggleBookmark(
+                'calculus3',
+                'Evaluate the integral ∫ 2x dx',
+                'Evaluate the integral of 2x.',
+                'Mathematics - Calculus',
+                'Calculus.html#question3',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer3" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                ∫ 2x dx = <strong>x² + C</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 4 -->
+
+    <div class="card calculus-question" id="question4">
+
+        <h3>📝 Example Question 4</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Find the derivative of:</p>
+
+        <h2>f(x) = 5x⁴ − 2x</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer4', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-calculus4"
+            onclick="toggleBookmark(
+                'calculus4',
+                'Find the derivative of 5x⁴ − 2x',
+                'Find the derivative of f(x) = 5x⁴ − 2x.',
+                'Mathematics - Calculus',
+                'Calculus.html#question4',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer4" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                f'(x) = <strong>20x³ − 2</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 5 -->
+
+    <div class="card calculus-question" id="question5">
+
+        <h3>📝 Example Question 5</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Evaluate:</p>
+
+        <h2>∫ 6 dx</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer5', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-calculus5"
+            onclick="toggleBookmark(
+                'calculus5',
+                'Evaluate ∫ 6 dx',
+                'Evaluate the integral of 6.',
+                'Mathematics - Calculus',
+                'Calculus.html#question5',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer5" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                ∫ 6 dx = <strong>6x + C</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function showAnswer(id, button) {
+
+    var answer = document.getElementById(id);
+
+    if (answer.style.display === "block") {
+
+        answer.style.display = "none";
+        button.innerHTML = "Show Answer";
+
+    } else {
+
+        answer.style.display = "block";
+        button.innerHTML = "Hide Answer";
+
+    }
+
+}
+
+
+function toggleBookmark(id, title, description, subject, link, button) {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    var existingIndex =
+        bookmarks.findIndex(function(bookmark) {
+
+            return bookmark.id === id;
+
+        });
+
+
+    if (existingIndex !== -1) {
+
+        bookmarks.splice(existingIndex, 1);
+
+        button.classList.remove("saved");
+
+    } else {
+
+        bookmarks.push({
+
+            id: id,
+            title: title,
+            description: description,
+            subject: subject,
+            link: link
+
+        });
+
+        button.classList.add("saved");
+
+    }
+
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+}
+
+
+function updateBookmarkButtons() {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    bookmarks.forEach(function(bookmark) {
+
+        var button =
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
+
+        if (button) {
+
+            button.classList.add("saved");
+
+        }
+
+    });
+
+}
+
+
+function searchCalculus() {
+
+    var search =
+        document.getElementById("calculusSearch")
+        .value
+        .toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(".calculus-question");
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        question.style.display =
+            text.includes(search) ? "block" : "none";
+
+    });
+
+}
+
+
+window.addEventListener("load", function() {
+
+    updateBookmarkButtons();
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Algebra | Study Help Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* Small bookmark icon */
+
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
+        }
+
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
+        }
+
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+    <div class="logo-section">
+
+        <img src="Logo.png" class="logo">
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                <img src="home.png">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="math.html">
+                <img src="Math icon.png">
+                Mathematics
+            </a>
+        </li>
+
+        <li>
+            <a href="Science.html">
+                <img src="Science icon.png">
+                Science
+            </a>
+        </li>
+
+        <li>
+            <a href="english.html">
+                <img src="English icon.png">
+                English
+            </a>
+        </li>
+
+        <li>
+            <a href="history.html">
+                <img src="History icon.png">
+                History
+            </a>
+        </li>
+
+        <li>
+            <a href="ask-question.html">
+                <img src="ask-for-help.png">
+                Ask Question
+            </a>
+        </li>
+
+        <li>
+            <a href="my-questions.html">
+                <img src="My question.png">
+                My Questions
+            </a>
+        </li>
+
+        <li>
+            <a href="bookmarks.html">
+                <img src="bookmark.png">
+                Bookmarks
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                <img src="settings.png">
+                Settings
+            </a>
+        </li>
+
+        <li>
+            <a href="help.html">
+                <img src="help-desk.png">
+                Help & Support
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- Main Content -->
+
+<div class="main-content">
+
+
+    <!-- Top Bar -->
+
+    <div class="topbar">
+
+        <input
+            type="text"
+            id="algebraSearch"
+            placeholder="Search algebra topics..."
+            onkeyup="searchAlgebra()"
+        >
+
+        <a href="profile.html">
+
+            <img
+                src="Profile icon.png"
+                class="profile"
+            >
+
+        </a>
+
+    </div>
+
+
+    <!-- Welcome -->
+
+    <div class="welcome-text">
+
+        <h1>Algebra</h1>
+
+        <p>
+            Algebra is the study of numbers, variables and equations.
+            It helps you solve problems by using mathematical rules
+            and relationships.
+        </p>
+
+    </div>
+
+
+    <!-- What You'll Learn -->
+
+    <div class="card">
+
+        <h3>📚 What You'll Learn</h3>
+
+        <ul>
+
+            <li>Solving linear equations</li>
+
+            <li>Simplifying algebraic expressions</li>
+
+            <li>Expanding brackets</li>
+
+            <li>Factorising expressions</li>
+
+            <li>Using algebra to solve problems</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- Study Tip -->
+
+    <div class="card">
+
+        <h3>💡 Study Tip</h3>
+
+        <p>
+            When solving an equation, remember to perform the same
+            operation on both sides of the equation to keep it balanced.
+        </p>
+
+    </div>
+
+
+    <!-- QUESTION 1 -->
+
+    <div class="card algebra-question" id="question1">
+
+        <h3>Question 1</h3>
+
+        <p>
+            Solve: <strong>2x + 5 = 17</strong>
+        </p>
+
+
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer1')">
+
+            Show Answer
+
+        </button>
+
+
+        <!-- BOOKMARK BUTTON GOES HERE -->
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-algebra1"
+            onclick="toggleBookmark(
+                'algebra1',
+                'Solve: 2x + 5 = 17',
+                'Solve 2x + 5 = 17',
+                'Mathematics - Algebra',
+                'Algebra.html#question1',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div class="answer" id="answer1">
+
+            <p>
+
+                2x + 5 = 17
+                <br>
+
+                2x = 12
+                <br>
+
+                x = 6
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 2 -->
+
+    <div class="card algebra-question" id="question2">
+
+        <h3>Question 2</h3>
+
+        <p>
+            Simplify: <strong>4a + 3a - 2</strong>
+        </p>
+
+
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer2')">
+
+            Show Answer
+
+        </button>
+
+
+        <!-- BOOKMARK BUTTON -->
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-algebra2"
+            onclick="toggleBookmark(
+                'algebra2',
+                'Simplify: 4a + 3a - 2',
+                'Simplify 4a + 3a - 2',
+                'Mathematics - Algebra',
+                'Algebra.html#question2',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div class="answer" id="answer2">
+
+            <p>
+
+                4a + 3a - 2
+                =
+                <strong>7a - 2</strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 3 -->
+
+    <div class="card algebra-question" id="question3">
+
+        <h3>Question 3</h3>
+
+        <p>
+            Expand: <strong>(x + 4)(x + 2)</strong>
+        </p>
+
+
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer3')">
+
+            Show Answer
+
+        </button>
+
+
+        <!-- BOOKMARK BUTTON -->
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-algebra3"
+            onclick="toggleBookmark(
+                'algebra3',
+                'Expand: (x + 4)(x + 2)',
+                'Expand (x + 4)(x + 2)',
+                'Mathematics - Algebra',
+                'Algebra.html#question3',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div class="answer" id="answer3">
+
+            <p>
+
+                (x + 4)(x + 2)
+                <br>
+
+                = x² + 2x + 4x + 8
+                <br>
+
+                = <strong>x² + 6x + 8</strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 4 -->
+
+    <div class="card algebra-question" id="question4">
+
+        <h3>Question 4</h3>
+
+        <p>
+            Factorise: <strong>x² + 9x + 20</strong>
+        </p>
+
+
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer4')">
+
+            Show Answer
+
+        </button>
+
+
+        <!-- BOOKMARK BUTTON -->
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-algebra4"
+            onclick="toggleBookmark(
+                'algebra4',
+                'Factorise: x² + 9x + 20',
+                'Factorise x² + 9x + 20',
+                'Mathematics - Algebra',
+                'Algebra.html#question4',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div class="answer" id="answer4">
+
+            <p>
+
+                <strong>(x + 4)(x + 5)</strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 5 -->
+
+    <div class="card algebra-question" id="question5">
+
+        <h3>Question 5</h3>
+
+        <p>
+            Solve: <strong>5y - 10 = 40</strong>
+        </p>
+
+
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer5')">
+
+            Show Answer
+
+        </button>
+
+
+        <!-- BOOKMARK BUTTON -->
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-algebra5"
+            onclick="toggleBookmark(
+                'algebra5',
+                'Solve: 5y - 10 = 40',
+                'Solve 5y - 10 = 40',
+                'Mathematics - Algebra',
+                'Algebra.html#question5',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div class="answer" id="answer5">
+
+            <p>
+
+                5y - 10 = 40
+                <br>
+
+                5y = 50
+                <br>
+
+                y = <strong>10</strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   SHOW ANSWER
+========================= */
+
+function showAnswer(id) {
+
+    var answer =
+        document.getElementById(id);
+
+
+    if (answer.style.display === "block") {
+
+        answer.style.display = "none";
+
+    } else {
+
+        answer.style.display = "block";
+
+    }
+
+}
+
+
+/* =========================
+   BOOKMARK SYSTEM
+========================= */
+
+function toggleBookmark(
+    id,
+    title,
+    description,
+    subject,
+    link,
+    button
+) {
+
+    var bookmarks =
+        JSON.parse(
+            localStorage.getItem("studyBookmarks")
+        ) || [];
+
+
+    var existingIndex =
+        bookmarks.findIndex(function(bookmark) {
+
+            return bookmark.id === id;
+
+        });
+
+
+    /* Remove bookmark */
+
+    if (existingIndex !== -1) {
+
+        bookmarks.splice(
+            existingIndex,
+            1
+        );
+
+        button.innerHTML = "🔖";
+
+        button.classList.remove("saved");
+
+    }
+
+
+    /* Add bookmark */
+
+    else {
+
+        bookmarks.push({
+
+            id: id,
+
+            title: title,
+
+            description: description,
+
+            subject: subject,
+
+            link: link
+
+        });
+
+
+        button.innerHTML = "🔖";
+
+        button.classList.add("saved");
+
+    }
+
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+}
+
+
+/* =========================
+   CHECK SAVED BOOKMARKS
+========================= */
+
+function updateBookmarkButtons() {
+
+    var bookmarks =
+        JSON.parse(
+            localStorage.getItem("studyBookmarks")
+        ) || [];
+
+
+    bookmarks.forEach(function(bookmark) {
+
+        var button =
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
+
+        if (button) {
+
+            button.classList.add("saved");
+
+            button.innerHTML = "🔖";
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function searchAlgebra() {
+
+    var search =
+        document.getElementById(
+            "algebraSearch"
+        ).value.toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(
+            ".algebra-question"
+        );
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        if (text.includes(search)) {
+
+            question.style.display = "block";
+
+        } else {
+
+            question.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   PAGE LOAD
+========================= */
+
+window.addEventListener(
+    "load",
+    function() {
+
+        updateBookmarkButtons();
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

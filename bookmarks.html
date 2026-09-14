@@ -2,92 +2,97 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bookmarks | Study Help Hub</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- SIDEBAR -->
+<!-- Sidebar -->
 
 <div class="sidebar">
 
     <div class="logo-section">
-        <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
-        <h2>Study Help Hub</h2>
+
+        <img src="Logo.png" class="logo">
+
     </div>
 
     <ul>
 
         <li>
             <a href="index.html">
-                <img src="home.png" alt="Home">
-                <span>Home</span>
+                <img src="home.png">
+                Home
             </a>
         </li>
 
         <li>
             <a href="math.html">
-                <img src="Math icon.png" alt="Mathematics">
-                <span>Mathematics</span>
+                <img src="Math icon.png">
+                Mathematics
             </a>
         </li>
 
         <li>
-            <a href="science.html">
-                <img src="Science icon.png" alt="Science">
-                <span>Science</span>
+            <a href="Science.html">
+                <img src="Science icon.png">
+                Science
             </a>
         </li>
 
         <li>
             <a href="english.html">
-                <img src="English icon.png" alt="English">
-                <span>English</span>
+                <img src="English icon.png">
+                English
             </a>
         </li>
 
         <li>
             <a href="history.html">
-                <img src="History icon.png" alt="History">
-                <span>History</span>
+                <img src="History icon.png">
+                History
             </a>
         </li>
 
         <li>
             <a href="ask-question.html">
-                <img src="ask-for-help.png" alt="Ask Question">
-                <span>Ask Question</span>
+                <img src="ask-for-help.png">
+                Ask Question
             </a>
         </li>
 
         <li>
             <a href="my-questions.html">
-                <img src="My question.png" alt="My Questions">
-                <span>My Questions</span>
+                <img src="My question.png">
+                My Questions
             </a>
         </li>
 
         <li>
             <a href="bookmarks.html">
-                <img src="bookmark.png" alt="Bookmarks">
-                <span>Bookmarks</span>
+                <img src="bookmark.png">
+                Bookmarks
             </a>
         </li>
 
         <li>
             <a href="settings.html">
-                <img src="settings.png" alt="Settings">
-                <span>Settings</span>
+                <img src="settings.png">
+                Settings
             </a>
         </li>
 
         <li>
             <a href="help.html">
-                <img src="help-desk.png" alt="Help & Support">
-                <span>Help & Support</span>
+                <img src="help-desk.png">
+                Help & Support
             </a>
         </li>
 
@@ -96,270 +101,229 @@
 </div>
 
 
-<!-- MAIN CONTENT -->
+<!-- Main Content -->
 
 <div class="main-content">
-
-    <!-- TOP BAR -->
 
     <div class="topbar">
 
         <input
             type="text"
-            placeholder="Search bookmarks..."
+            id="bookmarkSearch"
+            placeholder="Search your bookmarks..."
+            onkeyup="searchBookmarks()"
         >
 
-        <img
-            src="Profile icon.png"
-            alt="Profile"
-            class="profile"
-        >
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
 
     </div>
 
-
-    <!-- WELCOME -->
 
     <div class="welcome-text">
 
-        <h1>🔖 Bookmarks</h1>
+        <h1>🔖 My Bookmarks</h1>
 
         <p>
-            Save useful lessons, questions and study resources
-            so you can easily find them again later.
+            Save useful questions and resources so you can easily find
+            them again later.
         </p>
 
     </div>
 
 
-    <!-- BOOKMARK 1 -->
+    <div id="bookmarksContainer"></div>
 
-    <div class="card">
 
-        <h3>🧮 Algebra Basics</h3>
+    <div class="card" id="noBookmarks">
 
-        <p>
-            Learn about variables, expressions, equations,
-            expanding brackets and factorisation.
-        </p>
+        <h3>📭 No Bookmarks Yet</h3>
 
         <p>
-            <strong>Subject:</strong> Mathematics
+            You haven't bookmarked any questions yet.
         </p>
 
-        <button
-            class="show-btn"
-            onclick="showBookmark('bookmark1', this)">
-            View Resource
-        </button>
+        <br>
 
-        <div id="bookmark1" class="answer">
+<a href="index.html"
+   class="show-btn"
+   style="display:inline-block; text-decoration:none;">
 
-            <p>
-                This bookmarked resource covers the basic
-                concepts needed to understand algebra.
-            </p>
+    Find Questions →
 
-            <a href="algebra.html">
-                Go to Algebra →
-            </a>
-
-        </div>
+</a>
 
     </div>
 
-
-    <!-- BOOKMARK 2 -->
-
-    <div class="card">
-
-        <h3>📐 Geometry Formulas</h3>
-
-        <p>
-            Review important geometry topics including
-            angles, area, perimeter, circles and volume.
-        </p>
-
-        <p>
-            <strong>Subject:</strong> Mathematics
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showBookmark('bookmark2', this)">
-            View Resource
-        </button>
-
-        <div id="bookmark2" class="answer">
-
-            <p>
-                Use this resource to review important
-                geometry concepts and formulas.
-            </p>
-
-            <a href="Geometry.html">
-                Go to Geometry →
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOOKMARK 3 -->
-
-    <div class="card">
-
-        <h3>🧪 Chemistry Basics</h3>
-
-        <p>
-            Review elements, compounds, atoms, chemical
-            reactions and other chemistry concepts.
-        </p>
-
-        <p>
-            <strong>Subject:</strong> Science
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showBookmark('bookmark3', this)">
-            View Resource
-        </button>
-
-        <div id="bookmark3" class="answer">
-
-            <p>
-                This resource provides a useful starting
-                point for learning chemistry.
-            </p>
-
-            <a href="chemistry.html">
-                Go to Chemistry →
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOOKMARK 4 -->
-
-    <div class="card">
-
-        <h3>📖 English Literary Devices</h3>
-
-        <p>
-            Learn about metaphors, similes, personification
-            and other literary techniques.
-        </p>
-
-        <p>
-            <strong>Subject:</strong> English
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showBookmark('bookmark4', this)">
-            View Resource
-        </button>
-
-        <div id="bookmark4" class="answer">
-
-            <p>
-                Review common literary devices and learn
-                how they are used in writing.
-            </p>
-
-            <a href="english.html">
-                Go to English →
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOOKMARK 5 -->
-
-    <div class="card">
-
-        <h3>📜 History Sources</h3>
-
-        <p>
-            Understand primary and secondary sources
-            and how historians use evidence.
-        </p>
-
-        <p>
-            <strong>Subject:</strong> History
-        </p>
-
-        <button
-            class="show-btn"
-            onclick="showBookmark('bookmark5', this)">
-            View Resource
-        </button>
-
-        <div id="bookmark5" class="answer">
-
-            <p>
-                Learn how historical evidence can be
-                examined and interpreted.
-            </p>
-
-            <a href="history.html">
-                Go to History →
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- STUDY TIP -->
-
-    <div class="card">
-
-        <h3>💡 Study Tip</h3>
-
-        <p>
-            Bookmark resources that you find especially
-            useful. Reviewing them regularly can help you
-            remember important information and prepare
-            for assessments.
-        </p>
-
-    </div>
 
 </div>
 
 
-<!-- JAVASCRIPT -->
-
 <script>
 
-function showBookmark(id, button) {
+/* Load bookmarks */
 
-    var bookmark = document.getElementById(id);
+function loadBookmarks() {
 
-    if (bookmark.style.display === "block") {
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
 
-        bookmark.style.display = "none";
+    var container =
+        document.getElementById("bookmarksContainer");
 
-        button.innerHTML = "View Resource";
+    var noBookmarks =
+        document.getElementById("noBookmarks");
 
-    } else {
+    container.innerHTML = "";
 
-        bookmark.style.display = "block";
 
-        button.innerHTML = "Hide Resource";
+    if (bookmarks.length === 0) {
+
+        noBookmarks.style.display = "block";
+
+        return;
+
+    }
+
+
+    noBookmarks.style.display = "none";
+
+
+    bookmarks.forEach(function(bookmark, index) {
+
+        var card = document.createElement("div");
+
+        card.className = "card bookmark-card";
+
+
+        card.innerHTML = `
+
+            <h3>🔖 ${bookmark.title}</h3>
+
+            <p>
+                ${bookmark.description}
+            </p>
+
+            <p>
+                <strong>Subject:</strong>
+                ${bookmark.subject}
+            </p>
+
+            <br>
+
+            <a
+                href="${bookmark.link}"
+                class="show-btn"
+                style="display:inline-block; text-decoration:none;"
+            >
+                View Question →
+            </a>
+
+            <button
+                class="show-btn"
+                onclick="removeBookmark(${index})"
+                style="margin-left:10px;"
+            >
+                🗑️ Remove Bookmark
+            </button>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* Remove bookmark */
+
+function removeBookmark(index) {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    bookmarks.splice(index, 1);
+
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+
+    loadBookmarks();
+
+}
+
+
+/* Search bookmarks */
+
+function searchBookmarks() {
+
+    var search =
+        document.getElementById("bookmarkSearch")
+        .value
+        .toLowerCase();
+
+
+    var cards =
+        document.querySelectorAll(".bookmark-card");
+
+
+    var found = false;
+
+
+    cards.forEach(function(card) {
+
+        var text =
+            card.innerText.toLowerCase();
+
+
+        if (text.includes(search)) {
+
+            card.style.display = "block";
+
+            found = true;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    if (search !== "" && !found) {
+
+        document.getElementById("noBookmarks").style.display =
+            "block";
+
+        document.getElementById("noBookmarks").querySelector("h3")
+            .innerText = "🔍 No Bookmarks Found";
+
+        document.getElementById("noBookmarks").querySelector("p")
+            .innerText = "No bookmarks match your search.";
 
     }
 
 }
 
+
+/* Load bookmarks */
+
+window.onload = function() {
+
+    loadBookmarks();
+
+};
+
 </script>
 
 </body>
+
 </html>

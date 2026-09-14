@@ -100,8 +100,6 @@
 
 <div class="main-content">
 
-    <!-- TOP BAR -->
-
     <div class="topbar">
 
         <input
@@ -117,8 +115,6 @@
 
     </div>
 
-
-    <!-- WELCOME -->
 
     <div class="welcome-text">
 
@@ -236,10 +232,7 @@
             Notify me when someone answers my question
         </label>
 
-        <p
-            id="notificationMessage"
-            style="margin-top:15px;"
-        ></p>
+        <p id="notificationMessage" style="margin-top:15px;"></p>
 
     </div>
 
@@ -303,10 +296,7 @@
             Allow other users to see my profile
         </label>
 
-        <p
-            id="privacyMessage"
-            style="margin-top:15px;"
-        ></p>
+        <p id="privacyMessage" style="margin-top:15px;"></p>
 
     </div>
 
@@ -329,10 +319,7 @@
             Reset Settings
         </button>
 
-        <p
-            id="resetMessage"
-            style="margin-top:15px;"
-        ></p>
+        <p id="resetMessage" style="margin-top:15px;"></p>
 
     </div>
 
@@ -352,14 +339,14 @@ function saveName() {
         document.getElementById("nameMessage").innerHTML =
             "Please enter a name.";
 
-    } else {
-
-        localStorage.setItem("studyName", name);
-
-        document.getElementById("nameMessage").innerHTML =
-            "✅ Name saved successfully.";
+        return;
 
     }
+
+    localStorage.setItem("studyName", name);
+
+    document.getElementById("nameMessage").innerHTML =
+        "✅ Name saved successfully.";
 
 }
 
@@ -384,12 +371,27 @@ function notificationChanged() {
     var answers =
         document.getElementById("answers").checked;
 
-    localStorage.setItem("studyReminders", studyReminders);
+    localStorage.setItem(
+        "studyReminders",
+        studyReminders
+    );
 
-    localStorage.setItem("answerNotifications", answers);
+    localStorage.setItem(
+        "answerNotifications",
+        answers
+    );
 
-    document.getElementById("notificationMessage").innerHTML =
-        "✅ Notification settings updated.";
+    if (studyReminders || answers) {
+
+        document.getElementById("notificationMessage").innerHTML =
+            "✅ Notification settings updated.";
+
+    } else {
+
+        document.getElementById("notificationMessage").innerHTML =
+            "✅ Notifications are turned off.";
+
+    }
 
 }
 
@@ -438,7 +440,10 @@ function toggleContrast() {
 
     }
 
-    localStorage.setItem("highContrast", enabled);
+    localStorage.setItem(
+        "highContrast",
+        enabled
+    );
 
 }
 
@@ -448,31 +453,64 @@ function privacyChanged() {
     var enabled =
         document.getElementById("publicProfile").checked;
 
-    localStorage.setItem("publicProfile", enabled);
+    localStorage.setItem(
+        "publicProfile",
+        enabled
+    );
 
-    document.getElementById("privacyMessage").innerHTML =
-        "✅ Privacy setting updated.";
+    if (enabled) {
+
+        document.getElementById("privacyMessage").innerHTML =
+            "✅ Your profile is now visible to other users.";
+
+    } else {
+
+        document.getElementById("privacyMessage").innerHTML =
+            "✅ Your profile is now private.";
+
+    }
 
 }
 
-
 function resetSettings() {
 
-    localStorage.clear();
+    /*
+       Only remove SETTINGS.
+
+       Do NOT use localStorage.clear()
+       because bookmarks and questions
+       will also be stored in localStorage.
+    */
+
+    localStorage.removeItem("studyName");
+    localStorage.removeItem("studySubject");
+    localStorage.removeItem("studyReminders");
+    localStorage.removeItem("answerNotifications");
+    localStorage.removeItem("textSize");
+    localStorage.removeItem("highContrast");
+    localStorage.removeItem("publicProfile");
+
 
     document.getElementById("displayName").value = "";
 
-    document.getElementById("subject").value = "Mathematics";
+    document.getElementById("subject").value =
+        "Mathematics";
 
-    document.getElementById("notifications").checked = false;
+    document.getElementById("notifications").checked =
+        false;
 
-    document.getElementById("answers").checked = false;
+    document.getElementById("answers").checked =
+        false;
 
-    document.getElementById("publicProfile").checked = false;
+    document.getElementById("publicProfile").checked =
+        false;
 
-    document.getElementById("textSize").value = "normal";
+    document.getElementById("textSize").value =
+        "normal";
 
-    document.getElementById("highContrast").checked = false;
+    document.getElementById("highContrast").checked =
+        false;
+
 
     document.body.classList.remove(
         "large-text",
@@ -480,6 +518,11 @@ function resetSettings() {
     );
 
     document.body.style.filter = "none";
+
+
+    document.getElementById("notificationMessage").innerHTML = "";
+
+    document.getElementById("privacyMessage").innerHTML = "";
 
     document.getElementById("resetMessage").innerHTML =
         "✅ Settings have been reset.";
@@ -507,6 +550,66 @@ window.onload = function() {
 
         document.getElementById("subject").value =
             savedSubject;
+
+    }
+
+
+    var savedReminders =
+        localStorage.getItem("studyReminders");
+
+    if (savedReminders !== null) {
+
+        document.getElementById("notifications").checked =
+            savedReminders === "true";
+
+    }
+
+
+    var savedAnswers =
+        localStorage.getItem("answerNotifications");
+
+    if (savedAnswers !== null) {
+
+        document.getElementById("answers").checked =
+            savedAnswers === "true";
+
+    }
+
+
+    var savedProfile =
+        localStorage.getItem("publicProfile");
+
+    if (savedProfile !== null) {
+
+        document.getElementById("publicProfile").checked =
+            savedProfile === "true";
+
+    }
+
+
+    var savedTextSize =
+        localStorage.getItem("textSize");
+
+    if (savedTextSize) {
+
+        document.getElementById("textSize").value =
+            savedTextSize;
+
+        changeTextSize();
+
+    }
+
+
+    var savedContrast =
+        localStorage.getItem("highContrast");
+
+    if (savedContrast === "true") {
+
+        document.getElementById("highContrast").checked =
+            true;
+
+        document.body.style.filter =
+            "contrast(1.2)";
 
     }
 
