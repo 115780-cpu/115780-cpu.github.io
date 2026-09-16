@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,12 +136,7 @@
 
 <div class="topbar">
 
-<input
-type="text"
-id="geometrySearch"
-placeholder="Search Geometry..."
-onkeyup="searchGeometry()"
->
+<input type="text" placeholder="Search Geometry...">
 
 <a href="profile.html">
 <img src="Profile icon.png" class="profile" alt="Profile">
@@ -154,10 +150,9 @@ onkeyup="searchGeometry()"
 <h1>➕ Geometry</h1>
 
 <p>
-Geometry is the branch of mathematics that studies shapes,
-angles, lines, distances, area, volume, and space. It is used
-in architecture, engineering, design, construction, and
-everyday life.
+Geometry is the branch of mathematics that studies shapes, angles,
+lines, distances, area, volume, and space. It is used in architecture,
+engineering, design, construction, and everyday life.
 </p>
 
 </div>
@@ -170,19 +165,12 @@ everyday life.
 <ul>
 
 <li>Lines & Angles</li>
-
 <li>Triangles</li>
-
 <li>Quadrilaterals</li>
-
 <li>Circles</li>
-
 <li>Polygons</li>
-
 <li>Area & Perimeter</li>
-
 <li>Volume & Surface Area</li>
-
 <li>Pythagorean Theorem</li>
 
 </ul>
@@ -195,11 +183,9 @@ everyday life.
 <h3>💡 Study Tip</h3>
 
 <p>
-
-Draw a clear diagram and label all known lengths and angles
-before solving a problem. A well-labelled diagram makes it
-much easier to choose the correct formula and avoid mistakes.
-
+Draw a clear diagram and label all known lengths and angles before
+solving a problem. A well-labelled diagram makes it much easier to
+choose the correct formula and avoid mistakes.
 </p>
 
 </div>
@@ -207,7 +193,7 @@ much easier to choose the correct formula and avoid mistakes.
 
 <!-- Question 1 -->
 
-<div class="card geometry-question" id="question1">
+<div class="card">
 
 <h3>📝 Example Question 1</h3>
 
@@ -233,8 +219,7 @@ onclick="toggleBookmark(
 'Mathematics - Geometry',
 'Geometry.html#question1',
 this
-)"
-aria-label="Bookmark question">
+)">
 🔖
 </button>
 
@@ -253,7 +238,7 @@ aria-label="Bookmark question">
 
 <!-- Question 2 -->
 
-<div class="card geometry-question" id="question2">
+<div class="card">
 
 <h3>📝 Example Question 2</h3>
 
@@ -279,8 +264,7 @@ onclick="toggleBookmark(
 'Mathematics - Geometry',
 'Geometry.html#question2',
 this
-)"
-aria-label="Bookmark question">
+)">
 🔖
 </button>
 
@@ -301,7 +285,7 @@ aria-label="Bookmark question">
 
 <!-- Question 3 -->
 
-<div class="card geometry-question" id="question3">
+<div class="card">
 
 <h3>📝 Example Question 3</h3>
 
@@ -327,8 +311,7 @@ onclick="toggleBookmark(
 'Mathematics - Geometry',
 'Geometry.html#question3',
 this
-)"
-aria-label="Bookmark question">
+)">
 🔖
 </button>
 
@@ -351,7 +334,7 @@ aria-label="Bookmark question">
 
 <!-- Question 4 -->
 
-<div class="card geometry-question" id="question4">
+<div class="card">
 
 <h3>📝 Example Question 4</h3>
 
@@ -373,12 +356,11 @@ id="bookmark-geometry4"
 onclick="toggleBookmark(
 'geometry4',
 'Find the circumference of a circle',
-'Find the circumference when the radius is 7 cm.',
+'Find the circumference of a circle with a radius of 7 cm.',
 'Mathematics - Geometry',
 'Geometry.html#question4',
 this
-)"
-aria-label="Bookmark question">
+)">
 🔖
 </button>
 
@@ -386,7 +368,9 @@ aria-label="Bookmark question">
 
 <p><strong>Answer</strong></p>
 
-<p>C = 2 × π × r</p>
+<p>
+C = 2 × π × r
+</p>
 
 <p>
 C = 2 × π × 7 ≈ <strong>43.98 cm</strong>
@@ -399,7 +383,7 @@ C = 2 × π × 7 ≈ <strong>43.98 cm</strong>
 
 <!-- Question 5 -->
 
-<div class="card geometry-question" id="question5">
+<div class="card">
 
 <h3>📝 Example Question 5</h3>
 
@@ -425,8 +409,7 @@ onclick="toggleBookmark(
 'Mathematics - Geometry',
 'Geometry.html#question5',
 this
-)"
-aria-label="Bookmark question">
+)">
 🔖
 </button>
 
@@ -441,6 +424,7 @@ aria-label="Bookmark question">
 </div>
 
 </div>
+
 
 </div>
 
@@ -470,12 +454,20 @@ button.innerHTML = "Hide Answer";
 }
 
 
-/* Bookmark */
+/* Bookmark System */
 
-function toggleBookmark(id, title, description, subject, link, button){
+function toggleBookmark(
+id,
+title,
+description,
+subject,
+link,
+button
+){
 
 var bookmarks =
 JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
 
 var existingIndex =
 bookmarks.findIndex(function(bookmark){
@@ -520,12 +512,13 @@ JSON.stringify(bookmarks)
 }
 
 
-/* Check saved bookmarks */
+/* Show already saved bookmarks */
 
 function updateBookmarkButtons(){
 
 var bookmarks =
 JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
 
 bookmarks.forEach(function(bookmark){
 
@@ -533,6 +526,7 @@ var button =
 document.getElementById(
 "bookmark-" + bookmark.id
 );
+
 
 if(button){
 
@@ -545,46 +539,15 @@ button.classList.add("saved");
 }
 
 
-/* Search */
-
-function searchGeometry(){
-
-var search =
-document.getElementById("geometrySearch")
-.value
-.toLowerCase();
-
-var questions =
-document.querySelectorAll(".geometry-question");
-
-questions.forEach(function(question){
-
-var text =
-question.innerText.toLowerCase();
-
-if(text.includes(search)){
-
-question.style.display = "block";
-
-}else{
-
-question.style.display = "none";
-
-}
-
-});
-
-}
-
-
-window.addEventListener("load", function(){
-
-updateBookmarkButtons();
-
-});
+window.addEventListener(
+"load",
+updateBookmarkButtons
+);
 
 </script>
 
 </body>
 
 </html>
+```
+
