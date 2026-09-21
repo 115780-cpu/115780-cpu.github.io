@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trignometry | Study Help Hub</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-<!-- Sidebar -->
+    <title>Trigonometry | Study Help Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
+        }
+
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
+        }
+
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
 
 <div class="sidebar">
 
     <div class="logo-section">
+
         <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
+
         <h2>Study Help Hub</h2>
+
     </div>
 
     <ul>
@@ -93,199 +126,358 @@
 
 </div>
 
-<!-- Main Content -->
 
 <div class="main-content">
 
     <div class="topbar">
-        <input type="text" placeholder="Search Trignometry...">
-        <img src="Profile icon.png" class="profile">
+
+<input type="text" placeholder="Search Trigonometry..." onkeyup="searchPage()">
+
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
+
     </div>
+
 
     <div class="welcome-text">
 
-        <h1>➕ Trignometry</h1>
+        <h1>➕ Trigonometry</h1>
 
         <p>
-            Trignometry is the branch of mathematics that studies the relationships between angles and sides of triangles. It is widely used in engineering, architecture, navigation, astronomy, computer graphics, surveying, and physics to calculate distances, heights, and angles.
+            Trigonometry is the branch of mathematics that studies the
+            relationships between angles and sides of triangles. It is
+            widely used in engineering, architecture, navigation,
+            astronomy, computer graphics, surveying, and physics.
         </p>
 
     </div>
 
+
     <div class="card">
+
         <h3>📚 What You'll Learn</h3>
 
-<ul>
-        <li>Right-Angled Triangles</li>
-        <li>SOH CAH TOA</li>
-        <li>Sine, Cosine and Tangent</li>
-        <li>Finding Missing Sides</li>
-        <li>Finding Missing Angles</li>
-        <li>Angles of Elevation & Depression</li>
-        <li>Bearings</li>
-        <li>Real-Life Applications of Trigonometry</li>
-    </ul>
+        <ul>
 
+            <li>Right-Angled Triangles</li>
+            <li>SOH CAH TOA</li>
+            <li>Sine, Cosine and Tangent</li>
+            <li>Finding Missing Sides</li>
+            <li>Finding Missing Angles</li>
+            <li>Angles of Elevation & Depression</li>
+            <li>Bearings</li>
+            <li>Real-Life Applications of Trigonometry</li>
 
-    </div>
-<div class="card">
-
-    <h3>💡 Study Tip</h3>
-
-    <p>
-        Remember the mnemonic <strong>SOH CAH TOA</strong> to choose the correct trigonometric ratio. Always identify the opposite, adjacent, and hypotenuse before solving a problem.
-    </p>
-
-</div>
-<div class="card">
-
-    <h3>📝 Example Question 1</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>A right triangle has an opposite side of 6 cm and a hypotenuse of 10 cm.</p>
-
-    <p>Find the value of sin θ.</p>
-
-    <button class="show-btn" onclick="showAnswer('answer1', this)">
-        Show Answer
-    </button>
-
-    <div id="answer1" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>sin θ = Opposite ÷ Hypotenuse</p>
-
-        <p>sin θ = 6 ÷ 10 = <strong>0.6</strong></p>
+        </ul>
 
     </div>
 
-</div>
 
     <div class="card">
 
-    <h3>📝 Example Question 2</h3>
+        <h3>💡 Study Tip</h3>
 
-    <p><strong>Question:</strong></p>
+        <p>
+            Remember the mnemonic <strong>SOH CAH TOA</strong> to choose
+            the correct trigonometric ratio. Always identify the
+            opposite, adjacent, and hypotenuse before solving a problem.
+        </p>
 
-    <p>A right triangle has an adjacent side of 8 cm and a hypotenuse of 10 cm.</p>
+    </div>
 
-    <p>Find cos θ.</p>
 
-    <button class="show-btn" onclick="showAnswer('answer2', this)">
-        Show Answer
-    </button>
+    <!-- Question 1 -->
 
-    <div id="answer2" class="answer">
+    <div class="card trig-question" id="question1">
 
-        <p><strong>Answer</strong></p>
+        <h3>📝 Example Question 1</h3>
 
-        <p>cos θ = Adjacent ÷ Hypotenuse</p>
+        <p><strong>Question:</strong></p>
 
-        <p>cos θ = 8 ÷ 10 = <strong>0.8</strong></p>
+        <p>
+            A right triangle has an opposite side of 6 cm and a
+            hypotenuse of 10 cm.
+        </p>
+
+        <p>Find the value of sin θ.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer1', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-trigonometry1"
+            onclick="toggleBookmark(
+                'trigonometry1',
+                'Find the value of sin θ',
+                'Opposite side = 6 cm and hypotenuse = 10 cm.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question1',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer1" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>sin θ = Opposite ÷ Hypotenuse</p>
+
+            <p>
+                sin θ = 6 ÷ 10 = <strong>0.6</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 2 -->
+
+    <div class="card trig-question" id="question2">
+
+        <h3>📝 Example Question 2</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            A right triangle has an adjacent side of 8 cm and a
+            hypotenuse of 10 cm.
+        </p>
+
+        <p>Find cos θ.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer2', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-trigonometry2"
+            onclick="toggleBookmark(
+                'trigonometry2',
+                'Find cos θ',
+                'Adjacent side = 8 cm and hypotenuse = 10 cm.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question2',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer2" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>cos θ = Adjacent ÷ Hypotenuse</p>
+
+            <p>
+                cos θ = 8 ÷ 10 = <strong>0.8</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 3 -->
+
+    <div class="card trig-question" id="question3">
+
+        <h3>📝 Example Question 3</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            A right triangle has an opposite side of 12 cm and an
+            adjacent side of 5 cm.
+        </p>
+
+        <p>Find tan θ.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer3', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-trigonometry3"
+            onclick="toggleBookmark(
+                'trigonometry3',
+                'Find tan θ',
+                'Opposite side = 12 cm and adjacent side = 5 cm.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question3',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer3" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>tan θ = Opposite ÷ Adjacent</p>
+
+            <p>
+                tan θ = 12 ÷ 5 = <strong>2.4</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 4 -->
+
+    <div class="card trig-question" id="question4">
+
+        <h3>📝 Example Question 4</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            A ladder is 5 m long and leans against a wall. The base of
+            the ladder is 3 m from the wall.
+        </p>
+
+        <p>How high does the ladder reach?</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer4', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-trigonometry4"
+            onclick="toggleBookmark(
+                'trigonometry4',
+                'Find the height reached by a ladder',
+                'A 5 m ladder has its base 3 m from the wall.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question4',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer4" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>Using Pythagoras:</p>
+
+            <p>Height² = 5² − 3²</p>
+
+            <p>Height² = 25 − 9 = 16</p>
+
+            <p>Height = <strong>4 m</strong></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 5 -->
+
+    <div class="card trig-question" id="question5">
+
+        <h3>📝 Example Question 5</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            A tree casts a shadow 10 m long. The angle of elevation of
+            the Sun is 45°.
+        </p>
+
+        <p>Find the height of the tree.</p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer5', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-trigonometry5"
+            onclick="toggleBookmark(
+                'trigonometry5',
+                'Find the height of a tree',
+                'A tree casts a 10 m shadow at an angle of elevation of 45°.',
+                'Mathematics - Trigonometry',
+                'Trigonometry.html#question5',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer5" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>tan 45° = Height ÷ 10</p>
+
+            <p>1 = Height ÷ 10</p>
+
+            <p>Height = <strong>10 m</strong></p>
+
+        </div>
 
     </div>
 
 </div>
-<div class="card">
-
-    <h3>📝 Example Question 3</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>A right triangle has an opposite side of 12 cm and an adjacent side of 5 cm.</p>
-
-    <p>Find tan θ.</p>
-
-    <button class="show-btn" onclick="showAnswer('answer3', this)">
-        Show Answer
-    </button>
-
-    <div id="answer3" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>tan θ = Opposite ÷ Adjacent</p>
-
-        <p>tan θ = 12 ÷ 5 = <strong>2.4</strong></p>
-
-    </div>
-
-</div>
 
 
-<div class="card">
-
-    <h3>📝 Example Question 4</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>A ladder is 5 m long and leans against a wall. The base of the ladder is 3 m from the wall.</p>
-
-    <p>How high does the ladder reach?</p>
-
-    <button class="show-btn" onclick="showAnswer('answer4', this)">
-        Show Answer
-    </button>
-
-    <div id="answer4" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>Using Pythagoras:</p>
-
-        <p>Height² = 5² − 3²</p>
-
-        <p>Height² = 25 − 9 = 16</p>
-
-        <p>Height = <strong>4 m</strong></p>
-
-    </div>
-
-</div>
-
-<div class="card">
-
-    <h3>📝 Example Question 5</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>A tree casts a shadow 10 m long. The angle of elevation of the Sun is 45°.</p>
-
-    <p>Find the height of the tree.</p>
-
-    <button class="show-btn" onclick="showAnswer('answer5', this)">
-        Show Answer
-    </button>
-
-    <div id="answer5" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>tan 45° = Height ÷ 10</p>
-
-        <p>1 = Height ÷ 10</p>
-
-        <p>Height = <strong>10 m</strong></p>
-
-    </div>
-
-</div>
-
-</div>
 <script>
 
-function showAnswer(id, button){
+function showAnswer(id, button) {
 
     var answer = document.getElementById(id);
 
-    if(answer.style.display === "block"){
+    if (answer.style.display === "block") {
 
         answer.style.display = "none";
         button.innerHTML = "Show Answer";
 
-    }else{
+    } else {
 
         answer.style.display = "block";
         button.innerHTML = "Hide Answer";
@@ -294,6 +486,110 @@ function showAnswer(id, button){
 
 }
 
+
+function toggleBookmark(id, title, description, subject, link, button) {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    var existingIndex =
+        bookmarks.findIndex(function(bookmark) {
+
+            return bookmark.id === id;
+
+        });
+
+
+    if (existingIndex !== -1) {
+
+        bookmarks.splice(existingIndex, 1);
+
+        button.classList.remove("saved");
+
+    } else {
+
+        bookmarks.push({
+
+            id: id,
+            title: title,
+            description: description,
+            subject: subject,
+            link: link
+
+        });
+
+        button.classList.add("saved");
+
+    }
+
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+}
+
+
+function updateBookmarkButtons() {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    bookmarks.forEach(function(bookmark) {
+
+        var button =
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
+
+        if (button) {
+
+            button.classList.add("saved");
+
+        }
+
+    });
+
+}
+
+
+function searchTrig() {
+
+    var search =
+        document.getElementById("trigSearch")
+        .value
+        .toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(".trig-question");
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        question.style.display =
+            text.includes(search) ? "block" : "none";
+
+    });
+
+}
+
+
+window.addEventListener("load", function() {
+
+    updateBookmarkButtons();
+
+});
+
 </script>
+<script src="search.js"></script>
 </body>
 </html>

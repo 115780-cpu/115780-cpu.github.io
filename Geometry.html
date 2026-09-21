@@ -1,41 +1,40 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry | Study Help Hub</title>
 
-<title>Geometry | Study Help Hub</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
+    <style>
 
-<style>
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
+        }
 
-.bookmark-icon{
-    width:40px;
-    height:40px;
-    border:none;
-    background:transparent;
-    font-size:22px;
-    cursor:pointer;
-    border-radius:50%;
-    transition:0.2s;
-    margin-left:5px;
-}
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
+        }
 
-.bookmark-icon:hover{
-    background:rgba(0,0,0,0.08);
-    transform:scale(1.1);
-}
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
+        }
 
-.bookmark-icon.saved{
-    background:rgba(30,58,95,0.1);
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -45,87 +44,87 @@
 
 <div class="sidebar">
 
-<div class="logo-section">
+    <div class="logo-section">
 
-<img src="Logo.png" alt="Study Help Hub Logo" class="logo">
+        <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
 
-<h2>Study Help Hub</h2>
+        <h2>Study Help Hub</h2>
 
-</div>
+    </div>
 
-<ul>
+    <ul>
 
-<li>
-<a href="index.html">
-<img src="home.png" alt="Home">
-<span>Home</span>
-</a>
-</li>
+        <li>
+            <a href="index.html">
+                <img src="home.png" alt="Home">
+                <span>Home</span>
+            </a>
+        </li>
 
-<li>
-<a href="math.html">
-<img src="Math icon.png" alt="Mathematics">
-<span>Mathematics</span>
-</a>
-</li>
+        <li>
+            <a href="math.html">
+                <img src="Math icon.png" alt="Mathematics">
+                <span>Mathematics</span>
+            </a>
+        </li>
 
-<li>
-<a href="science.html">
-<img src="Science icon.png" alt="Science">
-<span>Science</span>
-</a>
-</li>
+        <li>
+            <a href="science.html">
+                <img src="Science icon.png" alt="Science">
+                <span>Science</span>
+            </a>
+        </li>
 
-<li>
-<a href="english.html">
-<img src="English icon.png" alt="English">
-<span>English</span>
-</a>
-</li>
+        <li>
+            <a href="english.html">
+                <img src="English icon.png" alt="English">
+                <span>English</span>
+            </a>
+        </li>
 
-<li>
-<a href="history.html">
-<img src="History icon.png" alt="History">
-<span>History</span>
-</a>
-</li>
+        <li>
+            <a href="history.html">
+                <img src="History icon.png" alt="History">
+                <span>History</span>
+            </a>
+        </li>
 
-<li>
-<a href="ask-question.html">
-<img src="ask-for-help.png" alt="Ask Question">
-<span>Ask Question</span>
-</a>
-</li>
+        <li>
+            <a href="ask-question.html">
+                <img src="ask-for-help.png" alt="Ask Question">
+                <span>Ask Question</span>
+            </a>
+        </li>
 
-<li>
-<a href="my-questions.html">
-<img src="My question.png" alt="My Questions">
-<span>My Questions</span>
-</a>
-</li>
+        <li>
+            <a href="my-questions.html">
+                <img src="My question.png" alt="My Questions">
+                <span>My Questions</span>
+            </a>
+        </li>
 
-<li>
-<a href="bookmarks.html">
-<img src="bookmark.png" alt="Bookmarks">
-<span>Bookmarks</span>
-</a>
-</li>
+        <li>
+            <a href="bookmarks.html">
+                <img src="bookmark.png" alt="Bookmarks">
+                <span>Bookmarks</span>
+            </a>
+        </li>
 
-<li>
-<a href="settings.html">
-<img src="settings.png" alt="Settings">
-<span>Settings</span>
-</a>
-</li>
+        <li>
+            <a href="settings.html">
+                <img src="settings.png" alt="Settings">
+                <span>Settings</span>
+            </a>
+        </li>
 
-<li>
-<a href="help.html">
-<img src="help-desk.png" alt="Help & Support">
-<span>Help & Support</span>
-</a>
-</li>
+        <li>
+            <a href="help.html">
+                <img src="help-desk.png" alt="Help & Support">
+                <span>Help & Support</span>
+            </a>
+        </li>
 
-</ul>
+    </ul>
 
 </div>
 
@@ -134,297 +133,325 @@
 
 <div class="main-content">
 
-<div class="topbar">
+    <div class="topbar">
 
-<input type="text" placeholder="Search Geometry...">
+<input type="text" placeholder="Search Geometry..." onkeyup="searchPage()">
 
-<a href="profile.html">
-<img src="Profile icon.png" class="profile" alt="Profile">
-</a>
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
 
-</div>
+    </div>
 
 
-<div class="welcome-text">
+    <div class="welcome-text">
 
-<h1>➕ Geometry</h1>
+        <h1>➕ Geometry</h1>
 
-<p>
-Geometry is the branch of mathematics that studies shapes, angles,
-lines, distances, area, volume, and space. It is used in architecture,
-engineering, design, construction, and everyday life.
-</p>
+        <p>
+            Geometry is the branch of mathematics that studies shapes,
+            angles, lines, distances, area, volume, and space. It is used
+            in architecture, engineering, design, construction, and
+            everyday life.
+        </p>
 
-</div>
+    </div>
 
 
-<div class="card">
+    <div class="card">
 
-<h3>📚 What You'll Learn</h3>
+        <h3>📚 What You'll Learn</h3>
 
-<ul>
+        <ul>
 
-<li>Lines & Angles</li>
-<li>Triangles</li>
-<li>Quadrilaterals</li>
-<li>Circles</li>
-<li>Polygons</li>
-<li>Area & Perimeter</li>
-<li>Volume & Surface Area</li>
-<li>Pythagorean Theorem</li>
+            <li>Lines & Angles</li>
+            <li>Triangles</li>
+            <li>Quadrilaterals</li>
+            <li>Circles</li>
+            <li>Polygons</li>
+            <li>Area & Perimeter</li>
+            <li>Volume & Surface Area</li>
+            <li>Pythagorean Theorem</li>
 
-</ul>
+        </ul>
 
-</div>
+    </div>
 
 
-<div class="card">
+    <div class="card">
 
-<h3>💡 Study Tip</h3>
+        <h3>💡 Study Tip</h3>
 
-<p>
-Draw a clear diagram and label all known lengths and angles before
-solving a problem. A well-labelled diagram makes it much easier to
-choose the correct formula and avoid mistakes.
-</p>
+        <p>
+            Draw a clear diagram and label all known lengths and angles
+            before solving a problem. A well-labelled diagram makes it
+            much easier to choose the correct formula and avoid mistakes.
+        </p>
 
-</div>
+    </div>
 
 
-<!-- Question 1 -->
+    <!-- Question 1 -->
 
-<div class="card">
+    <div class="card geometry-question" id="question1">
 
-<h3>📝 Example Question 1</h3>
+        <h3>📝 Example Question 1</h3>
 
-<p><strong>Question:</strong></p>
+        <p><strong>Question:</strong></p>
 
-<p>Find the missing angle in a triangle.</p>
+        <p>Find the missing angle in a triangle.</p>
 
-<p>Two angles are 60° and 70°.</p>
+        <p>Two angles are 60° and 70°.</p>
 
-<button
-class="show-btn"
-onclick="showAnswer('answer1', this)">
-Show Answer
-</button>
 
-<button
-class="bookmark-icon"
-id="bookmark-geometry1"
-onclick="toggleBookmark(
-'geometry1',
-'Find the missing angle in a triangle',
-'Two angles are 60° and 70°.',
-'Mathematics - Geometry',
-'Geometry.html#question1',
-this
-)">
-🔖
-</button>
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer1', this)">
+            Show Answer
+        </button>
 
-<div id="answer1" class="answer">
 
-<p><strong>Answer</strong></p>
+        <button
+            class="bookmark-icon"
+            id="bookmark-geometry1"
+            onclick="toggleBookmark(
+                'geometry1',
+                'Find the missing angle in a triangle',
+                'Two angles are 60° and 70°.',
+                'Mathematics - Geometry',
+                'Geometry.html#question1',
+                this
+            )"
+            aria-label="Bookmark question">
 
-<p>
-180° − 60° − 70° = <strong>50°</strong>
-</p>
+            🔖
 
-</div>
+        </button>
 
-</div>
 
+        <div id="answer1" class="answer">
 
-<!-- Question 2 -->
+            <p><strong>Answer</strong></p>
 
-<div class="card">
+            <p>
+                180° − 60° − 70° = <strong>50°</strong>
+            </p>
 
-<h3>📝 Example Question 2</h3>
+        </div>
 
-<p><strong>Question:</strong></p>
+    </div>
 
-<p>Find the area of a rectangle.</p>
 
-<p>Length = 12 cm, Width = 8 cm.</p>
+    <!-- Question 2 -->
 
-<button
-class="show-btn"
-onclick="showAnswer('answer2', this)">
-Show Answer
-</button>
+    <div class="card geometry-question" id="question2">
 
-<button
-class="bookmark-icon"
-id="bookmark-geometry2"
-onclick="toggleBookmark(
-'geometry2',
-'Find the area of a rectangle',
-'Length = 12 cm, Width = 8 cm.',
-'Mathematics - Geometry',
-'Geometry.html#question2',
-this
-)">
-🔖
-</button>
+        <h3>📝 Example Question 2</h3>
 
-<div id="answer2" class="answer">
+        <p><strong>Question:</strong></p>
 
-<p><strong>Answer</strong></p>
+        <p>Find the area of a rectangle.</p>
 
-<p>Area = Length × Width</p>
+        <p>Length = 12 cm, Width = 8 cm.</p>
 
-<p>
-12 × 8 = <strong>96 cm²</strong>
-</p>
 
-</div>
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer2', this)">
+            Show Answer
+        </button>
 
-</div>
 
+        <button
+            class="bookmark-icon"
+            id="bookmark-geometry2"
+            onclick="toggleBookmark(
+                'geometry2',
+                'Find the area of a rectangle',
+                'Length = 12 cm, Width = 8 cm.',
+                'Mathematics - Geometry',
+                'Geometry.html#question2',
+                this
+            )"
+            aria-label="Bookmark question">
 
-<!-- Question 3 -->
+            🔖
 
-<div class="card">
+        </button>
 
-<h3>📝 Example Question 3</h3>
 
-<p><strong>Question:</strong></p>
+        <div id="answer2" class="answer">
 
-<p>A right triangle has sides of 6 cm and 8 cm.</p>
+            <p><strong>Answer</strong></p>
 
-<p>Find the hypotenuse.</p>
+            <p>Area = Length × Width</p>
 
-<button
-class="show-btn"
-onclick="showAnswer('answer3', this)">
-Show Answer
-</button>
+            <p>
+                12 × 8 = <strong>96 cm²</strong>
+            </p>
 
-<button
-class="bookmark-icon"
-id="bookmark-geometry3"
-onclick="toggleBookmark(
-'geometry3',
-'Find the hypotenuse of a right triangle',
-'A right triangle has sides of 6 cm and 8 cm.',
-'Mathematics - Geometry',
-'Geometry.html#question3',
-this
-)">
-🔖
-</button>
+        </div>
 
-<div id="answer3" class="answer">
+    </div>
 
-<p><strong>Answer</strong></p>
 
-<p>
-6² + 8² = 36 + 64 = 100
-</p>
+    <!-- Question 3 -->
 
-<p>
-√100 = <strong>10 cm</strong>
-</p>
+    <div class="card geometry-question" id="question3">
 
-</div>
+        <h3>📝 Example Question 3</h3>
 
-</div>
+        <p><strong>Question:</strong></p>
 
+        <p>A right triangle has sides of 6 cm and 8 cm.</p>
 
-<!-- Question 4 -->
+        <p>Find the hypotenuse.</p>
 
-<div class="card">
 
-<h3>📝 Example Question 4</h3>
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer3', this)">
+            Show Answer
+        </button>
 
-<p><strong>Question:</strong></p>
 
-<p>
-Find the circumference of a circle with a radius of 7 cm.
-</p>
+        <button
+            class="bookmark-icon"
+            id="bookmark-geometry3"
+            onclick="toggleBookmark(
+                'geometry3',
+                'Find the hypotenuse of a right triangle',
+                'A right triangle has sides of 6 cm and 8 cm.',
+                'Mathematics - Geometry',
+                'Geometry.html#question3',
+                this
+            )"
+            aria-label="Bookmark question">
 
-<button
-class="show-btn"
-onclick="showAnswer('answer4', this)">
-Show Answer
-</button>
+            🔖
 
-<button
-class="bookmark-icon"
-id="bookmark-geometry4"
-onclick="toggleBookmark(
-'geometry4',
-'Find the circumference of a circle',
-'Find the circumference of a circle with a radius of 7 cm.',
-'Mathematics - Geometry',
-'Geometry.html#question4',
-this
-)">
-🔖
-</button>
+        </button>
 
-<div id="answer4" class="answer">
 
-<p><strong>Answer</strong></p>
+        <div id="answer3" class="answer">
 
-<p>
-C = 2 × π × r
-</p>
+            <p><strong>Answer</strong></p>
 
-<p>
-C = 2 × π × 7 ≈ <strong>43.98 cm</strong>
-</p>
+            <p>
+                6² + 8² = 36 + 64 = 100
+            </p>
 
-</div>
+            <p>
+                √100 = <strong>10 cm</strong>
+            </p>
 
-</div>
+        </div>
 
+    </div>
 
-<!-- Question 5 -->
 
-<div class="card">
+    <!-- Question 4 -->
 
-<h3>📝 Example Question 5</h3>
+    <div class="card geometry-question" id="question4">
 
-<p><strong>Question:</strong></p>
+        <h3>📝 Example Question 4</h3>
 
-<p>
-Find the sum of the interior angles of a hexagon.
-</p>
+        <p><strong>Question:</strong></p>
 
-<button
-class="show-btn"
-onclick="showAnswer('answer5', this)">
-Show Answer
-</button>
+        <p>
+            Find the circumference of a circle with a radius of 7 cm.
+        </p>
 
-<button
-class="bookmark-icon"
-id="bookmark-geometry5"
-onclick="toggleBookmark(
-'geometry5',
-'Find the sum of the interior angles of a hexagon',
-'Find the sum of the interior angles of a hexagon.',
-'Mathematics - Geometry',
-'Geometry.html#question5',
-this
-)">
-🔖
-</button>
 
-<div id="answer5" class="answer">
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer4', this)">
+            Show Answer
+        </button>
 
-<p><strong>Answer</strong></p>
 
-<p>
-(6 − 2) × 180 = <strong>720°</strong>
-</p>
+        <button
+            class="bookmark-icon"
+            id="bookmark-geometry4"
+            onclick="toggleBookmark(
+                'geometry4',
+                'Find the circumference of a circle',
+                'Find the circumference when the radius is 7 cm.',
+                'Mathematics - Geometry',
+                'Geometry.html#question4',
+                this
+            )"
+            aria-label="Bookmark question">
 
-</div>
+            🔖
 
-</div>
+        </button>
 
+
+        <div id="answer4" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>C = 2 × π × r</p>
+
+            <p>
+                C = 2 × π × 7 ≈ <strong>43.98 cm</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 5 -->
+
+    <div class="card geometry-question" id="question5">
+
+        <h3>📝 Example Question 5</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            Find the sum of the interior angles of a hexagon.
+        </p>
+
+
+        <button
+            class="show-btn"
+            onclick="showAnswer('answer5', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-geometry5"
+            onclick="toggleBookmark(
+                'geometry5',
+                'Find the sum of the interior angles of a hexagon',
+                'Find the sum of the interior angles of a hexagon.',
+                'Mathematics - Geometry',
+                'Geometry.html#question5',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer5" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                (6 − 2) × 180 = <strong>720°</strong>
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -433,121 +460,143 @@ this
 
 /* Show Answer */
 
-function showAnswer(id, button){
+function showAnswer(id, button) {
 
-var answer = document.getElementById(id);
+    var answer = document.getElementById(id);
 
-if(answer.style.display === "block"){
+    if (answer.style.display === "block") {
 
-answer.style.display = "none";
+        answer.style.display = "none";
 
-button.innerHTML = "Show Answer";
+        button.innerHTML = "Show Answer";
 
-}else{
+    } else {
 
-answer.style.display = "block";
+        answer.style.display = "block";
 
-button.innerHTML = "Hide Answer";
+        button.innerHTML = "Hide Answer";
+
+    }
 
 }
 
+
+/* Bookmark */
+
+function toggleBookmark(id, title, description, subject, link, button) {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    var existingIndex =
+        bookmarks.findIndex(function(bookmark) {
+
+            return bookmark.id === id;
+
+        });
+
+
+    if (existingIndex !== -1) {
+
+        bookmarks.splice(existingIndex, 1);
+
+        button.classList.remove("saved");
+
+    } else {
+
+        bookmarks.push({
+
+            id: id,
+            title: title,
+            description: description,
+            subject: subject,
+            link: link
+
+        });
+
+        button.classList.add("saved");
+
+    }
+
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
 }
 
 
-/* Bookmark System */
+/* Check saved bookmarks */
 
-function toggleBookmark(
-id,
-title,
-description,
-subject,
-link,
-button
-){
+function updateBookmarkButtons() {
 
-var bookmarks =
-JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
 
 
-var existingIndex =
-bookmarks.findIndex(function(bookmark){
+    bookmarks.forEach(function(bookmark) {
 
-return bookmark.id === id;
+        var button =
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
+
+        if (button) {
+
+            button.classList.add("saved");
+
+        }
+
+    });
+
+}
+
+
+/* Search */
+
+function searchGeometry() {
+
+    var search =
+        document.getElementById("geometrySearch")
+        .value
+        .toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(".geometry-question");
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        if (text.includes(search)) {
+
+            question.style.display = "block";
+
+        } else {
+
+            question.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener("load", function() {
+
+    updateBookmarkButtons();
 
 });
-
-
-if(existingIndex !== -1){
-
-bookmarks.splice(existingIndex, 1);
-
-button.classList.remove("saved");
-
-}else{
-
-bookmarks.push({
-
-id: id,
-
-title: title,
-
-description: description,
-
-subject: subject,
-
-link: link
-
-});
-
-button.classList.add("saved");
-
-}
-
-
-localStorage.setItem(
-"studyBookmarks",
-JSON.stringify(bookmarks)
-);
-
-}
-
-
-/* Show already saved bookmarks */
-
-function updateBookmarkButtons(){
-
-var bookmarks =
-JSON.parse(localStorage.getItem("studyBookmarks")) || [];
-
-
-bookmarks.forEach(function(bookmark){
-
-var button =
-document.getElementById(
-"bookmark-" + bookmark.id
-);
-
-
-if(button){
-
-button.classList.add("saved");
-
-}
-
-});
-
-}
-
-
-window.addEventListener(
-"load",
-updateBookmarkButtons
-);
 
 </script>
-
+<script src="search.js"></script>
 </body>
-
 </html>
-```
-

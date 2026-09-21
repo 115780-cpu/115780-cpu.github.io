@@ -1,276 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistics | Study Help Hub</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-<!-- Sidebar -->
+    <title>Statistics | Study Help Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .bookmark-icon {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+            transition: 0.2s;
+        }
+
+        .bookmark-icon:hover {
+            background: rgba(0, 0, 0, 0.08);
+            transform: scale(1.1);
+        }
+
+        .bookmark-icon.saved {
+            background: rgba(30, 58, 95, 0.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
 
 <div class="sidebar">
 
     <div class="logo-section">
+
         <img src="Logo.png" alt="Study Help Hub Logo" class="logo">
+
         <h2>Study Help Hub</h2>
+
     </div>
 
     <ul>
 
-        <li>
-            <a href="index.html">
-                <img src="home.png" alt="Home">
-                <span>Home</span>
-            </a>
-        </li>
+        <li><a href="index.html"><img src="home.png"><span>Home</span></a></li>
 
-        <li>
-            <a href="math.html">
-                <img src="Math icon.png" alt="Mathematics">
-                <span>Mathematics</span>
-            </a>
-        </li>
+        <li><a href="math.html"><img src="Math icon.png"><span>Mathematics</span></a></li>
 
-        <li>
-            <a href="science.html">
-                <img src="Science icon.png" alt="Science">
-                <span>Science</span>
-            </a>
-        </li>
+        <li><a href="science.html"><img src="Science icon.png"><span>Science</span></a></li>
 
-        <li>
-            <a href="english.html">
-                <img src="English icon.png" alt="English">
-                <span>English</span>
-            </a>
-        </li>
+        <li><a href="english.html"><img src="English icon.png"><span>English</span></a></li>
 
-        <li>
-            <a href="history.html">
-                <img src="History icon.png" alt="History">
-                <span>History</span>
-            </a>
-        </li>
+        <li><a href="history.html"><img src="History icon.png"><span>History</span></a></li>
 
-        <li>
-            <a href="ask-question.html">
-                <img src="ask-for-help.png" alt="Ask Question">
-                <span>Ask Question</span>
-            </a>
-        </li>
+        <li><a href="ask-question.html"><img src="ask-for-help.png"><span>Ask Question</span></a></li>
 
-        <li>
-            <a href="my-questions.html">
-                <img src="My question.png" alt="My Questions">
-                <span>My Questions</span>
-            </a>
-        </li>
+        <li><a href="my-questions.html"><img src="My question.png"><span>My Questions</span></a></li>
 
-        <li>
-            <a href="bookmarks.html">
-                <img src="bookmark.png" alt="Bookmarks">
-                <span>Bookmarks</span>
-            </a>
-        </li>
+        <li><a href="bookmarks.html"><img src="bookmark.png"><span>Bookmarks</span></a></li>
 
-        <li>
-            <a href="settings.html">
-                <img src="settings.png" alt="Settings">
-                <span>Settings</span>
-            </a>
-        </li>
+        <li><a href="settings.html"><img src="settings.png"><span>Settings</span></a></li>
 
-        <li>
-            <a href="help.html">
-                <img src="help-desk.png" alt="Help & Support">
-                <span>Help & Support</span>
-            </a>
-        </li>
+        <li><a href="help.html"><img src="help-desk.png"><span>Help & Support</span></a></li>
 
     </ul>
 
 </div>
 
-<!-- Main Content -->
 
 <div class="main-content">
 
     <div class="topbar">
-        <input type="text" placeholder="Search Statistics...">
-        <img src="Profile icon.png" class="profile">
+
+<input type="text" placeholder="Search Statistics..." onkeyup="searchPage()">
+
+        <a href="profile.html">
+            <img src="Profile icon.png" class="profile">
+        </a>
+
     </div>
+
 
     <div class="welcome-text">
 
         <h1>➕ Statistics</h1>
 
         <p>
-            Statistics is the branch of mathematics that involves collecting, organizing, analyzing, and interpreting data. It helps people make informed decisions by identifying patterns and trends in information, and it is widely used in science, business, medicine, sports, economics, and everyday life.
+            Statistics is the branch of mathematics that involves
+            collecting, organizing, analyzing, and interpreting data.
+            It helps people identify patterns and trends in information.
+        </p>
 
     </div>
+
 
     <div class="card">
+
         <h3>📚 What You'll Learn</h3>
-    <ul>
-        <li>Collecting Data</li>
-        <li>Tables and Charts</li>
-        <li>Mean, Median and Mode</li>
-        <li>Range and Spread</li>
-        <li>Probability</li>
-        <li>Interpreting Graphs</li>
-        <li>Comparing Data Sets</li>
-        <li>Making Predictions Using Data</li>
-    </ul>
 
-    </div>
-<div class="card">
+        <ul>
 
-    <h3>💡 Study Tip</h3>
+            <li>Collecting Data</li>
+            <li>Tables and Charts</li>
+            <li>Mean, Median and Mode</li>
+            <li>Range and Spread</li>
+            <li>Probability</li>
+            <li>Interpreting Graphs</li>
+            <li>Comparing Data Sets</li>
+            <li>Making Predictions Using Data</li>
 
-    <p>
-        Always read the question carefully and check what measure or graph is being asked for. Organizing your data clearly will help you avoid mistakes and make it easier to interpret your results.
-    </p>
-
-</div>
-<div class="card">
-
-    <h3>📝 Example Question 1</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>Find the mean of the following numbers:</p>
-
-    <h2>8, 10, 12, 15, 15</h2>
-
-    <button class="show-btn" onclick="showAnswer('answer1', this)">
-        Show Answer
-    </button>
-
-    <div id="answer1" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>(8 + 10 + 12 + 15 + 15) ÷ 5 = 60 ÷ 5 = <strong>12</strong></p>
+        </ul>
 
     </div>
 
-</div>
 
-<div class="card">
+    <div class="card">
 
-    <h3>📝 Example Question 2</h3>
+        <h3>💡 Study Tip</h3>
 
-    <p><strong>Question:</strong></p>
+        <p>
+            Always read the question carefully and check what measure
+            or graph is being asked for. Organizing your data clearly
+            will help you avoid mistakes.
+        </p>
 
-    <p>Find the median of:</p>
+    </div>
 
-    <h2>4, 7, 9, 11, 15</h2>
 
-    <button class="show-btn" onclick="showAnswer('answer2', this)">
-        Show Answer
-    </button>
+    <!-- Question 1 -->
 
-    <div id="answer2" class="answer">
+    <div class="card statistics-question" id="question1">
 
-        <p><strong>Answer</strong></p>
+        <h3>📝 Example Question 1</h3>
 
-        <p>The middle value is <strong>9</strong>.</p>
+        <p><strong>Question:</strong></p>
+
+        <p>Find the mean of the following numbers:</p>
+
+        <h2>8, 10, 12, 15, 15</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer1', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-statistics1"
+            onclick="toggleBookmark(
+                'statistics1',
+                'Find the mean',
+                'Find the mean of 8, 10, 12, 15, 15.',
+                'Mathematics - Statistics',
+                'Statistics.html#question1',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer1" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                (8 + 10 + 12 + 15 + 15) ÷ 5
+                = 60 ÷ 5
+                = <strong>12</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 2 -->
+
+    <div class="card statistics-question" id="question2">
+
+        <h3>📝 Example Question 2</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Find the median of:</p>
+
+        <h2>4, 7, 9, 11, 15</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer2', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-statistics2"
+            onclick="toggleBookmark(
+                'statistics2',
+                'Find the median',
+                'Find the median of 4, 7, 9, 11, 15.',
+                'Mathematics - Statistics',
+                'Statistics.html#question2',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer2" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                The middle value is <strong>9</strong>.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 3 -->
+
+    <div class="card statistics-question" id="question3">
+
+        <h3>📝 Example Question 3</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Find the mode of:</p>
+
+        <h2>3, 5, 5, 7, 9, 9, 9</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer3', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-statistics3"
+            onclick="toggleBookmark(
+                'statistics3',
+                'Find the mode',
+                'Find the mode of 3, 5, 5, 7, 9, 9, 9.',
+                'Mathematics - Statistics',
+                'Statistics.html#question3',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer3" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>
+                The mode is <strong>9</strong> because it appears most often.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 4 -->
+
+    <div class="card statistics-question" id="question4">
+
+        <h3>📝 Example Question 4</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>Find the range of:</p>
+
+        <h2>12, 18, 21, 27, 30</h2>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer4', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-statistics4"
+            onclick="toggleBookmark(
+                'statistics4',
+                'Find the range',
+                'Find the range of 12, 18, 21, 27, 30.',
+                'Mathematics - Statistics',
+                'Statistics.html#question4',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer4" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>Range = Largest − Smallest</p>
+
+            <p>
+                30 − 12 = <strong>18</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question 5 -->
+
+    <div class="card statistics-question" id="question5">
+
+        <h3>📝 Example Question 5</h3>
+
+        <p><strong>Question:</strong></p>
+
+        <p>
+            A bag contains 5 red balls and 3 blue balls.
+        </p>
+
+        <p>
+            What is the probability of picking a blue ball?
+        </p>
+
+
+        <button class="show-btn"
+                onclick="showAnswer('answer5', this)">
+            Show Answer
+        </button>
+
+
+        <button
+            class="bookmark-icon"
+            id="bookmark-statistics5"
+            onclick="toggleBookmark(
+                'statistics5',
+                'Probability of picking a blue ball',
+                'A bag contains 5 red balls and 3 blue balls.',
+                'Mathematics - Statistics',
+                'Statistics.html#question5',
+                this
+            )"
+            aria-label="Bookmark question">
+
+            🔖
+
+        </button>
+
+
+        <div id="answer5" class="answer">
+
+            <p><strong>Answer</strong></p>
+
+            <p>Total balls = 8</p>
+
+            <p>
+                Probability = 3 ÷ 8 = <strong>3/8</strong>
+            </p>
+
+        </div>
 
     </div>
 
 </div>
-<div class="card">
-
-    <h3>📝 Example Question 3</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>Find the mode of:</p>
-
-    <h2>3, 5, 5, 7, 9, 9, 9</h2>
-
-    <button class="show-btn" onclick="showAnswer('answer3', this)">
-        Show Answer
-    </button>
-
-    <div id="answer3" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>The mode is <strong>9</strong> because it appears most often.</p>
-
-    </div>
-
-</div>
 
 
-<div class="card">
-
-    <h3>📝 Example Question 4</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>Find the range of:</p>
-
-    <h2>12, 18, 21, 27, 30</h2>
-
-    <button class="show-btn" onclick="showAnswer('answer4', this)">
-        Show Answer
-    </button>
-
-    <div id="answer4" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>Range = Largest − Smallest</p>
-
-        <p>30 − 12 = <strong>18</strong></p>
-
-    </div>
-
-</div>
-
-<div class="card">
-
-    <h3>📝 Example Question 5</h3>
-
-    <p><strong>Question:</strong></p>
-
-    <p>A bag contains 5 red balls and 3 blue balls.</p>
-
-    <p>What is the probability of picking a blue ball?</p>
-
-    <button class="show-btn" onclick="showAnswer('answer5', this)">
-        Show Answer
-    </button>
-
-    <div id="answer5" class="answer">
-
-        <p><strong>Answer</strong></p>
-
-        <p>Total balls = 8</p>
-
-        <p>Probability = 3 ÷ 8 = <strong>3/8</strong></p>
-
-    </div>
-
-</div>
-
-</div>
 <script>
 
-function showAnswer(id, button){
+function showAnswer(id, button) {
 
     var answer = document.getElementById(id);
 
-    if(answer.style.display === "block"){
+    if (answer.style.display === "block") {
 
         answer.style.display = "none";
         button.innerHTML = "Show Answer";
 
-    }else{
+    } else {
 
         answer.style.display = "block";
         button.innerHTML = "Hide Answer";
@@ -279,6 +418,110 @@ function showAnswer(id, button){
 
 }
 
+
+function toggleBookmark(id, title, description, subject, link, button) {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    var existingIndex =
+        bookmarks.findIndex(function(bookmark) {
+
+            return bookmark.id === id;
+
+        });
+
+
+    if (existingIndex !== -1) {
+
+        bookmarks.splice(existingIndex, 1);
+
+        button.classList.remove("saved");
+
+    } else {
+
+        bookmarks.push({
+
+            id: id,
+            title: title,
+            description: description,
+            subject: subject,
+            link: link
+
+        });
+
+        button.classList.add("saved");
+
+    }
+
+
+    localStorage.setItem(
+        "studyBookmarks",
+        JSON.stringify(bookmarks)
+    );
+
+}
+
+
+function updateBookmarkButtons() {
+
+    var bookmarks =
+        JSON.parse(localStorage.getItem("studyBookmarks")) || [];
+
+
+    bookmarks.forEach(function(bookmark) {
+
+        var button =
+            document.getElementById(
+                "bookmark-" + bookmark.id
+            );
+
+
+        if (button) {
+
+            button.classList.add("saved");
+
+        }
+
+    });
+
+}
+
+
+function searchStatistics() {
+
+    var search =
+        document.getElementById("statisticsSearch")
+        .value
+        .toLowerCase();
+
+
+    var questions =
+        document.querySelectorAll(".statistics-question");
+
+
+    questions.forEach(function(question) {
+
+        var text =
+            question.innerText.toLowerCase();
+
+
+        question.style.display =
+            text.includes(search) ? "block" : "none";
+
+    });
+
+}
+
+
+window.addEventListener("load", function() {
+
+    updateBookmarkButtons();
+
+});
+
 </script>
+<script src="search.js"></script>
 </body>
 </html>
