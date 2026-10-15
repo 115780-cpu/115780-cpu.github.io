@@ -1,25 +1,38 @@
-function searchPage() {
+// Automatically highlight the current page
 
-    var searchBox = document.querySelector(".topbar input");
+document.addEventListener("DOMContentLoaded", function() {
 
-    if (!searchBox) {
-        return;
+    var currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+    if (currentPage === "" || currentPage === "/") {
+        currentPage = "index.html";
     }
 
-    var searchText = searchBox.value.toLowerCase().trim();
+    var sidebarLinks = document.querySelectorAll(".sidebar ul li a");
 
-    var cards = document.querySelectorAll(".card");
+    sidebarLinks.forEach(function(link) {
 
-    cards.forEach(function(card) {
+        var href = link.getAttribute("href");
 
-        var text = card.innerText.toLowerCase();
+        if (!href) {
+            return;
+        }
 
-        if (text.includes(searchText)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
+        var linkPage = href
+            .split("/")
+            .pop()
+            .split("#")[0]
+            .toLowerCase();
+
+        link.classList.remove("active");
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
         }
 
     });
 
-}
+});

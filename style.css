@@ -74,10 +74,10 @@ body{
     transition:0.25s ease; 
 } 
  
-.sidebar ul li a:hover{ 
-    background:rgba(255,255,255,0.15); 
-    transform:translateX(3px); 
-} 
+.sidebar ul li a.active{
+    background:rgba(255,255,255,0.20);
+    box-shadow:inset 3px 0 0 #4F8CFF;
+}
  
 .sidebar ul li a:visited{ 
     color:white; 
@@ -165,16 +165,16 @@ body{
 } 
  
 /* Question Cards */ 
- 
-.card{ 
-    background:rgba(255,255,255,0.92); 
-    padding:20px; 
-    margin-bottom:20px; 
-    border-radius:15px; 
-    box-shadow:0 5px 15px rgba(0,0,0,0.15); 
-    transition:0.25s ease; 
-} 
- 
+.card{
+    background:rgba(255,255,255,0.95);
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 3px 12px rgba(20,40,70,0.10);
+    border:1px solid rgba(255,255,255,0.7);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
 .card:hover{ 
     transform:translateY(-4px); 
     box-shadow:0 7px 18px rgba(0,0,0,0.18); 
@@ -304,3 +304,129 @@ body{
     background:rgba(30,58,95,0.1); 
 } 
 
+/* Welcome Button */
+
+.welcome-button {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 11px 20px;
+    background: #4F8CFF;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: all 0.25s ease;
+}
+
+.welcome-button:hover {
+    background: #3676E8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .main-content {
+        padding: 20px;
+        min-width: 0;
+    }
+
+    .topbar input {
+        width: min(300px, 70%);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-section {
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 0;
+    }
+
+    .sidebar ul li a {
+        padding: 8px;
+        font-size: 14px;
+        gap: 6px;
+    }
+
+    .sidebar ul li img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .topbar {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .topbar input {
+        width: 100%;
+    }
+
+    .welcome-text h1 {
+        font-size: 24px;
+    }
+
+    .card,
+    .welcome-text {
+        padding: 16px;
+    }
+
+}
+
+.welcome-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.welcome-buttons .welcome-button {
+    margin-top: 0;
+}
